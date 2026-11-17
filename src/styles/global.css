@@ -802,6 +802,7 @@ svg {
 }
 .profile-portrait {
   display: block;
+  margin-inline: auto;
   width: 100%;
   max-width: 280px;
   height: auto;
