@@ -25,32 +25,34 @@ export const shippingProject: Project = {
   confirmation:
     "Screenshot publication permission remains a separate review. Four kiosk captures are withheld until redaction is complete.",
 };
+export const reportingProject: Project = {
+  slug: "reporting-modernization",
+  number: "02",
+  category: "APPLICATION MODERNIZATION",
+  title: "VOC/HAP Reporting Modernization",
+  icon: "reporting",
+  status: "Deployed and in use",
+  summary:
+    "Independently developed a deployed replacement for a legacy VB.NET application experiencing Crystal Reports runtime issues, bringing customer setup, PDF reporting, and recipient workflows together.",
+  stack: [".NET 8", "WPF", "SQL Server", "QuestPDF"],
+  problem:
+    "Monthly customer reporting involves maintaining customer assignments and recipients, selecting reporting periods, generating documents, and distinguishing historical review from customer email distribution.",
+  responsibilities:
+    "Jason Lewis independently developed the application and owns the modernization work. The replacement is deployed and currently being used.",
+  approach:
+    "The desktop workflow organizes customer configuration, recipient management, historical PDF review, and monthly reporting and email processing.",
+  architecture:
+    "The documented portfolio stack is .NET 8, WPF, SQL Server, and QuestPDF. The workflow illustration describes application tasks rather than an infrastructure topology.",
+  challenges:
+    "Engineering considerations include maintainable reporting, customer and recipient associations, clear period selection, separating historical review from distribution, and communicating run status.",
+  outcome:
+    "A deployed application, currently in use, replaces the legacy VB.NET reporting application that was experiencing Crystal Reports runtime issues.",
+  confirmation:
+    "Confirm current stack details and employer permission before expanding technical or publication claims. Runtime root cause, email transport, and measured improvements have not been supplied.",
+};
 export const projects: readonly Project[] = [
   shippingProject,
-  {
-    slug: "reporting-modernization",
-    number: "02",
-    category: "APPLICATION MODERNIZATION",
-    title: "VOC/HAP Reporting Modernization",
-    icon: "reporting",
-    summary:
-      "Modernizing legacy monthly reporting with a maintainable desktop application and structured PDF workflows.",
-    stack: [".NET 8", "WPF", "SQL Server", "QuestPDF"],
-    problem:
-      "Legacy monthly reporting workflows can be difficult to maintain and evolve. This modernization effort focuses on a maintainable application for reporting, document generation, and recipient-related workflows.",
-    responsibilities:
-      "The project scope covers monthly reporting, PDF generation, customer and recipient management, and email delivery. These are areas of work and planned capability, not a claim that every feature is deployed.",
-    approach:
-      "Modernize the reporting workflow using .NET 8 and WPF, SQL Server data workflows, and QuestPDF for document generation. Keep the public description focused on the application’s purpose rather than confidential report content.",
-    architecture:
-      ".NET 8, WPF, SQL Server, and QuestPDF form the described technology stack. Exact component boundaries, delivery infrastructure, and data models are intentionally not published.",
-    challenges:
-      "Modernization must account for existing reporting expectations while improving maintainability. Report correctness, document layout, and recipient handling are considerations; specific validation practices and delivery behavior need confirmation.",
-    outcome:
-      "This is an ongoing modernization scope. Feature completion, deployment milestones, and operational results require confirmation. No reporting, PDF, or email functionality is claimed to be fully delivered here.",
-    confirmation:
-      "Confirm which reporting, PDF, recipient-management, and email capabilities are implemented, tested, and deployed.",
-  },
+  reportingProject,
   {
     slug: "manufacturing-erp",
     number: "03",

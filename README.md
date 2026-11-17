@@ -38,7 +38,7 @@ Preview serves the production artifact at `http://localhost:4173/engineering-por
 - `index.html`: metadata and restrictive production meta CSP.
 - `.github/`: Dependabot and a manual-only Pages deployment workflow.
 
-React safely renders text; there is no raw HTML rendering or runtime content fetching. The external-link component accepts only HTTPS GitHub and www.linkedin.com destinations, with embedded credentials and nonstandard ports rejected. Owner-supplied contact details live in `src/data/contact.ts`; email uses explicit `mailto:` links. There are no external fonts, analytics, embeds, form submissions, cookies, or application storage. The homepage illustration and shipping integration diagram are conceptual local visuals. The shipping case study also includes three reviewed, redacted application screenshots and four withheld-image placeholders; see `docs/shipping-image-review.md` for the review and publication considerations.
+React safely renders text; there is no raw HTML rendering or runtime content fetching. The external-link component accepts only HTTPS GitHub and www.linkedin.com destinations, with embedded credentials and nonstandard ports rejected. Owner-supplied contact details live in `src/data/contact.ts`; email uses explicit `mailto:` links. There are no external fonts, analytics, embeds, form submissions, cookies, or application storage. The homepage illustration and shipping integration diagram are conceptual local visuals. The shipping case study includes three reviewed, redacted application screenshots and four withheld-image placeholders. The VOC/HAP case study includes nine AI-assisted, privacy-edited screenshot renders with a visible provenance disclosure. See `docs/shipping-image-review.md` and `docs/voc-hap-case-study.md` for image review and publication considerations.
 
 ## Routing and GitHub Pages
 
@@ -78,8 +78,9 @@ The owner-supplied public résumé is bundled in `src/assets/jason-lewis-resume.
 
 Remaining confirmations:
 
-- Ownership, delivery status, and public outcomes for the remaining case studies; shipping ownership, production deployment, and observed outcomes are confirmed in the latest task.
-- Which VOC/HAP reporting, PDF, recipient-management, and email-delivery capabilities are implemented, tested, and deployed.
+- Manufacturing/ERP-specific ownership, delivery status, and public outcomes. Shipping ownership, production deployment, and observed outcomes are confirmed by the owner.
+- VOC/HAP independent ownership, deployed/in-use status, and legacy VB.NET/Crystal Reports runtime context are confirmed. Current stack details, deeper implementation decisions, and any measured improvements need supporting facts before expanding the description.
+- Owner approval of AI-edited image fidelity and employer permission for public use remain separate from image redaction review.
 
 No degrees, certifications, dates, years of experience, metrics, customer names, testimonials, availability claims, or salary information were invented. Case studies deliberately identify unverified details. Review all enterprise descriptions for employer/publication permission before publishing.
 
@@ -104,6 +105,23 @@ npm run preview -- --port 4173
 ```
 
 Open `http://localhost:4173/engineering-portfolio/#/projects/enterprise-shipping-management-suite`.
+
+## VOC/HAP reporting case study
+
+The dedicated page remains at `/#/projects/reporting-modernization`. It presents independent ownership and deployed/in-use status, the legacy VB.NET reporting context, customer and recipient workflows, historical PDF review, monthly distribution, a conceptual workflow, engineering considerations, and the confirmed deployed replacement outcome. Historical review is explicitly PDF-only and does not send customer emails or update email history.
+
+- `src/pages/ReportingCaseStudy.tsx`: dedicated reporting page.
+- `src/data/reportingCaseStudy.ts`: typed image slots, captions, alt text, dimensions, and engineering considerations.
+- `src/types/caseStudy.ts`: shared screenshot data contract.
+- `src/components/ScreenshotGallery.tsx`: directory-scoped local PNG URLs; shipping remains the default directory.
+- `src/styles/screenshot-gallery.css`: shared gallery/dialog presentation for both case studies.
+- `src/styles/reporting-case-study.css`: responsive reporting-page styling.
+- `public/images/voc-hap/`: nine reviewed edited PNGs from the handoff package.
+- `docs/voc-hap-case-study.md`: source, image decisions, and implementation questions.
+
+The images are AI-assisted privacy-edited renders and are identified as such on the page. Their typography, dimensions, and composition may differ from the original application captures. No original screenshots or source ZIP are included in public assets or build output. The documented .NET 8/WPF/SQL Server/QuestPDF stack is retained without inventing an email transport, runtime root cause, architecture decision, hardest challenge, or quantitative improvement.
+
+After building, preview the page at `http://localhost:4173/engineering-portfolio/#/projects/reporting-modernization` using `npm run preview -- --port 4173`.
 
 ## Validation
 

@@ -6,18 +6,29 @@ import {
   LockKeyhole,
   X,
 } from "lucide-react";
-import type { CaseStudyScreenshot } from "../data/shippingCaseStudy";
+import type { CaseStudyScreenshot } from "../types/caseStudy";
 
-function screenshotUrl(asset: string) {
-  return `${import.meta.env.BASE_URL}images/shipping/${asset}`;
+import "../styles/screenshot-gallery.css";
+
+type ImageDirectory = "shipping" | "voc-hap";
+function screenshotUrl(directory: ImageDirectory, asset: string) {
+  if (
+    !["shipping", "voc-hap"].includes(directory) ||
+    !/^[a-z0-9][a-z0-9-]*\.png$/.test(asset)
+  ) {
+    throw new Error("Unsupported local screenshot path");
+  }
+  return `${import.meta.env.BASE_URL}images/${directory}/${asset}`;
 }
 
 export function ScreenshotGallery({
   screenshots,
   label,
+  directory = "shipping",
 }: {
   screenshots: readonly CaseStudyScreenshot[];
   label: string;
+  directory?: ImageDirectory;
 }) {
   const [active, setActive] = useState<CaseStudyScreenshot | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
@@ -57,7 +68,7 @@ export function ScreenshotGallery({
               onClick={() => open(image)}
             >
               <img
-                src={screenshotUrl(image.asset)}
+                src={screenshotUrl(directory, image.asset)}
                 width={image.width}
                 height={image.height}
                 alt={image.alt}
@@ -141,7 +152,7 @@ export function ScreenshotGallery({
           {active?.asset && (
             <img
               className="image-viewer-image"
-              src={screenshotUrl(active.asset)}
+              src={screenshotUrl(directory, active.asset)}
               width={active.width}
               height={active.height}
               alt={active.alt}

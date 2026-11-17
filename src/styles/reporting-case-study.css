@@ -1,0 +1,393 @@
+.reporting-case-study {
+  padding-block: 48px 76px;
+}
+.reporting-hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 56px;
+  align-items: center;
+  padding-bottom: 45px;
+}
+.reporting-hero h1 {
+  font-size: clamp(38px, 4.3vw, 58px);
+  font-weight: 650;
+  line-height: 1.12;
+  margin-top: 18px;
+  text-wrap: balance;
+}
+.reporting-subtitle {
+  font-size: 20px;
+  color: #b7cce8;
+  line-height: 1.5;
+  margin-top: 23px;
+}
+.reporting-hero .badges {
+  margin-top: 24px;
+}
+.reporting-case-study .tech-badge {
+  font-size: 11px;
+  padding: 5px 10px;
+}
+.reporting-owner {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 13px;
+  margin-top: 26px;
+  color: #b5c6dd;
+}
+.reporting-owner strong {
+  color: var(--text);
+}
+.reporting-intro {
+  color: var(--muted);
+  font-size: 15px;
+  margin-top: 16px;
+}
+.reporting-hero .button {
+  margin-top: 27px;
+}
+.reporting-context {
+  border: 1px solid #375378;
+  border-radius: 12px;
+  background:
+    radial-gradient(ellipse at top right, #214d7f55, transparent 75%), #111d33;
+  padding: 30px;
+}
+.reporting-deployment {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #a4e2bf;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.reporting-context-step h2 {
+  font-size: 25px;
+  line-height: 1.35;
+  margin-top: 10px;
+}
+.reporting-context-step p {
+  color: #b0bfd3;
+  font-size: 13px;
+  margin-top: 11px;
+}
+.reporting-context-arrow {
+  color: #8db8f5;
+  margin-block: 21px;
+}
+.reporting-section-nav {
+  position: sticky;
+  top: 88px;
+  z-index: 10;
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  padding: 12px;
+  background: #0d182bf5;
+  border: 1px solid #344d70;
+  border-radius: 9px;
+}
+.reporting-section-nav button {
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 5px;
+  background: none;
+  color: #b7c8de;
+  padding: 10px 13px;
+  font-size: 12px;
+}
+.reporting-section-nav button:hover {
+  color: white;
+  background: #1b3153;
+}
+.reporting-section {
+  padding-top: 64px;
+  scroll-margin-top: 170px;
+}
+.reporting-section:focus {
+  outline: none;
+}
+.reporting-case-study .section-description {
+  font-size: 15px;
+  max-width: 860px;
+}
+.reporting-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+.reporting-overview-grid h3 {
+  font-size: 22px;
+}
+.reporting-overview-grid p {
+  font-size: 15px;
+  color: #b0bfd3;
+  margin-top: 14px;
+}
+.reporting-image-disclosure {
+  padding: 23px 26px;
+  border: 1px solid #344d70;
+  border-left: 3px solid #8db8f5;
+  border-radius: 7px;
+  background: #101c30;
+  margin-top: 38px;
+}
+.reporting-image-disclosure strong {
+  font-size: 14px;
+}
+.reporting-image-disclosure p {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #adbed5;
+  margin-top: 8px;
+}
+.reporting-single .screenshot-gallery {
+  grid-template-columns: minmax(0, 1fr);
+}
+.reporting-record-gallery .screenshot-card:first-child {
+  grid-column: 1 / -1;
+}
+.reporting-behavior-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px 24px;
+  margin-top: 25px;
+  background: #14273f;
+  border: 1px solid #36567d;
+  border-radius: 8px;
+}
+.reporting-behavior-note svg {
+  margin-top: 4px;
+  color: #9bc5ff;
+}
+.reporting-behavior-note p {
+  font-size: 14px;
+  color: #bacce3;
+}
+.reporting-behavior-note strong {
+  color: #f8fafc;
+}
+.reporting-workflow {
+  padding: 30px;
+  margin: 30px 0 0;
+  background: #101c30;
+  border: 1px solid #344f72;
+  border-radius: 10px;
+  text-align: center;
+}
+.reporting-workflow-origin {
+  padding: 22px;
+  background: #192d49;
+  border: 1px solid #42618b;
+  border-radius: 8px;
+}
+.reporting-workflow-origin h3 {
+  font-size: 22px;
+  line-height: 1.4;
+  margin-top: 8px;
+}
+.reporting-workflow-arrow {
+  color: #8bb9fa;
+  margin-block: 17px;
+}
+.reporting-workflow-branches {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 23px;
+}
+.reporting-workflow-branches > div {
+  padding: 25px;
+  border: 1px solid #3c577c;
+  border-radius: 8px;
+  background: #13233a;
+}
+.reporting-workflow-branches svg {
+  color: #9bc5ff;
+}
+.reporting-workflow-branches h3 {
+  margin-top: 16px;
+  font-size: 21px;
+}
+.reporting-workflow-branches p {
+  color: #b2c5df;
+  font-size: 14px;
+  margin-top: 12px;
+}
+.reporting-workflow-branches span {
+  color: #a4e2bf;
+  display: block;
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 14px;
+}
+.reporting-workflow figcaption {
+  font-size: 12px;
+  color: #a8bad2;
+  line-height: 1.8;
+  padding-top: 20px;
+  margin-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.reporting-considerations {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 27px;
+  margin-top: 30px;
+}
+.reporting-considerations article {
+  border-top: 1px solid #365071;
+  padding-top: 22px;
+}
+.reporting-considerations h3 {
+  font-size: 19px;
+  line-height: 1.4;
+  margin-top: 14px;
+}
+.reporting-considerations p {
+  color: #aebed3;
+  font-size: 14px;
+  margin-top: 12px;
+}
+.reporting-outcome {
+  display: flex;
+  align-items: flex-start;
+  gap: 23px;
+  padding: 30px;
+  margin-top: 30px;
+  border: 1px solid #42668b;
+  border-radius: 10px;
+  background:
+    radial-gradient(ellipse at right, #20456e55, transparent 75%), #111e33;
+}
+.reporting-outcome > svg {
+  color: #a4e2bf;
+  margin-top: 4px;
+}
+.reporting-outcome h3 {
+  font-size: 25px;
+  line-height: 1.4;
+}
+.reporting-outcome p {
+  color: #b8c8df;
+  font-size: 15px;
+  margin-top: 12px;
+}
+.reporting-stack .badges {
+  margin-top: 25px;
+}
+.reporting-closing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  padding: 40px;
+  margin-top: 65px;
+  background: #111e32;
+  border: 1px solid #3b5579;
+  border-radius: 10px;
+}
+.reporting-closing h2 {
+  font-size: 32px;
+  line-height: 1.3;
+  margin-top: 13px;
+}
+.reporting-closing p:not(.eyebrow) {
+  color: #aabbcf;
+  font-size: 14px;
+  margin-top: 16px;
+  max-width: 570px;
+}
+.reporting-closing > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+@media (max-width: 1100px) {
+  .reporting-hero {
+    gap: 28px;
+  }
+  .reporting-context {
+    padding: 25px;
+  }
+}
+@media (max-width: 800px) {
+  .reporting-hero {
+    grid-template-columns: 1fr;
+  }
+  .reporting-section-nav {
+    top: 72px;
+  }
+  .reporting-considerations {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .reporting-closing {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .reporting-closing > div:last-child {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 600px) {
+  .reporting-case-study {
+    padding-block: 30px 50px;
+  }
+  .reporting-hero {
+    padding-bottom: 30px;
+  }
+  .reporting-hero h1 {
+    font-size: 38px;
+  }
+  .reporting-subtitle {
+    font-size: 18px;
+  }
+  .reporting-section-nav {
+    top: 68px;
+    padding: 8px;
+  }
+  .reporting-section {
+    padding-top: 48px;
+    scroll-margin-top: 150px;
+  }
+  .reporting-overview-grid,
+  .reporting-workflow-branches,
+  .reporting-considerations {
+    grid-template-columns: 1fr;
+  }
+  .reporting-overview-grid {
+    gap: 27px;
+  }
+  .reporting-workflow {
+    padding: 20px;
+  }
+  .reporting-workflow-origin h3 {
+    font-size: 19px;
+  }
+  .reporting-workflow-branches > div {
+    padding: 22px 16px;
+  }
+  .reporting-behavior-note {
+    padding: 20px;
+    gap: 12px;
+  }
+  .reporting-outcome {
+    flex-direction: column;
+    padding: 25px;
+    gap: 18px;
+  }
+  .reporting-outcome h3 {
+    font-size: 24px;
+  }
+  .reporting-closing {
+    padding: 28px 24px;
+  }
+  .reporting-closing h2 {
+    font-size: 28px;
+  }
+}

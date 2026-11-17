@@ -82,3 +82,26 @@ All seven candidates were visually inspected. Three reviewed dashboard PNGs were
 - Desktop/mobile hero and enlarged-image screenshots were visually reviewed.
 
 There is no configured unit-test suite or `npm test` command. Browser checks were one-off checks using the environment's Playwright, Chromium, and temporary axe tooling; no application dependencies were added. The owner subsequently authorized committing and pushing the reviewed implementation. No publication or deployment was performed. The implementation is complete with the explicitly requested placeholders for images requiring corrected redaction.
+
+## VOC/HAP reporting case-study implementation
+
+Built the dedicated reporting page at the existing `/projects/reporting-modernization` hash route. Updated shared project summaries and status on Home and Projects; shipping remains the flagship. Moved the screenshot type and gallery/modal styles into shared files and added a validated local directory option to the viewer, retaining `shipping` as its default.
+
+### Image decisions
+
+Extracted the source package outside the public directory; read its task, content, review, and manifest. Reinspected all nine AI-assisted redacted renders at full resolution. No residual sensitive identifiers were visible, so all nine were integrated under `public/images/voc-hap/` without further visual edits. Public and production image hashes and dimensions match the manifest; all have no exposed metadata fields. No originals or ZIP archives are in public/build output. The page and alt text disclose AI-assisted privacy editing. See `docs/voc-hap-case-study.md` for each path and decision.
+
+### Checks executed
+
+- `npm run build`: passed, including strict TypeScript and Vite output.
+- `npm run lint`: passed with zero errors/warnings.
+- `git diff --check`: passed.
+- Reporting browser checks at 1440, 768, 375, and 320 pixels: correct direct route and refresh, nine image slots, successful image decoding, base-prefixed same-origin URLs, preserved aspect ratios, no horizontal overflow.
+- Four reporting-page and four reporting-dialog axe scans: zero WCAG 2/2.1 A/AA findings.
+- Viewer: initial close-button focus, Tab/Shift+Tab containment, previous/next buttons and wrapping, left/right arrow navigation, Escape and close-button dismissal, focus restoration, single-image gallery behavior, and body-scroll restoration passed.
+- Reduced-motion section navigation, Home/Projects entry points, deployed status, retained shipping flagship, representative unrelated pages, and résumé download passed functional checks.
+- No application/CSP errors, failed HTTP responses, or third-party requests in the reporting run.
+- Shipping regression browser run passed at the same four widths, including its three images, four withheld placeholders, aspect ratios, modal controls, section navigation, direct refresh, legacy redirect, and Home/Projects entry points. Four page and four dialog accessibility scans reported zero findings.
+- Desktop/mobile reporting hero and viewer screenshots visually reviewed.
+
+No unit-test suite or `npm test` script is configured. Browser checks used the existing environment's Playwright/Chromium and temporary axe tooling; no application dependencies changed. The owner subsequently authorized committing and pushing the implementation. No deployment, publication, or GitHub settings changes were performed.
