@@ -36,7 +36,7 @@ Preview serves the production artifact at `http://localhost:4173/engineering-por
 - `index.html`: metadata and restrictive production meta CSP.
 - `.github/`: Dependabot and a manual-only Pages deployment workflow.
 
-React safely renders text; there is no raw HTML rendering or runtime content fetching. The external-link component accepts only HTTPS GitHub destinations. Update that validation deliberately when verified LinkedIn or other contact URLs are supplied. There are no external fonts, analytics, embeds, form submissions, cookies, or application storage. All illustrations are conceptual local CSS/SVG visuals, not screenshots or representations of proprietary architecture.
+React safely renders text; there is no raw HTML rendering or runtime content fetching. The external-link component accepts only HTTPS GitHub and www.linkedin.com destinations, with embedded credentials and nonstandard ports rejected. Owner-supplied contact details live in `src/data/contact.ts`; email uses explicit `mailto:` links. There are no external fonts, analytics, embeds, form submissions, cookies, or application storage. All illustrations are conceptual local CSS/SVG visuals, not screenshots or representations of proprietary architecture.
 
 ## Routing and GitHub Pages
 
@@ -70,7 +70,7 @@ The build job has read-only repository access and does not retain checkout crede
 
 ## Content requiring confirmation
 
-- Verified professional email, LinkedIn URL, and a reviewed public résumé. These are noninteractive notices until supplied.
+- A reviewed public résumé remains to be supplied. Business email and LinkedIn were supplied by the owner and are active contact links.
 - Official title and employment dates at HarperLove Adhesives LLC.
 - Individual project ownership/responsibilities, implementation and deployment status, and approved public examples or outcomes.
 - Which VOC/HAP reporting, PDF, recipient-management, and email-delivery capabilities are implemented, tested, and deployed.

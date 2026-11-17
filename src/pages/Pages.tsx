@@ -18,6 +18,7 @@ import {
 import { ProjectCard } from "../components/ProjectCard";
 import { CaseStudyLayout } from "../components/CaseStudyLayout";
 import { projects } from "../data/projects";
+import { contact } from "../data/contact";
 function PageHeading({
   eyebrow,
   title,
@@ -88,12 +89,14 @@ export function About() {
             <br />
             Full-stack development
           </div>
-          <ExternalLink
-            className="text-link"
-            href="https://github.com/JasonLewis007"
-          >
-            Find me on GitHub <ArrowUpRight size={16} aria-hidden="true" />
-          </ExternalLink>
+          <div className="profile-links">
+            <ExternalLink className="text-link" href={contact.linkedIn}>
+              Connect on LinkedIn <ArrowUpRight size={16} aria-hidden="true" />
+            </ExternalLink>
+            <ExternalLink className="text-link" href={contact.github}>
+              Find me on GitHub <ArrowUpRight size={16} aria-hidden="true" />
+            </ExternalLink>
+          </div>
         </aside>
       </div>
       <CallToAction />
@@ -266,11 +269,6 @@ export function Skills() {
     </div>
   );
 }
-const contactChannels = [
-  [Mail, "Email", "A verified professional email will be added here."],
-  [ContactRound, "LinkedIn", "A verified LinkedIn profile will be added here."],
-  [FileText, "Résumé", "A reviewed, public résumé will be added here."],
-] as const;
 export function Contact() {
   return (
     <div className="container page-content">
@@ -281,40 +279,71 @@ export function Contact() {
       />
       <div className="contact-grid">
         <div className="contact-primary">
-          <CodeXml size={32} aria-hidden="true" />
-          <SectionHeading
-            eyebrow="THE BEST PLACE TO START"
-            title="Connect on GitHub."
-          >
-            Explore my public work or connect through my GitHub profile.
+          <Mail size={32} aria-hidden="true" />
+          <SectionHeading eyebrow="START A CONVERSATION" title="Get in touch.">
+            Have a role, project, or engineering challenge in mind? Send me an
+            email or connect on LinkedIn.
           </SectionHeading>
-          <ExternalLink
-            className="button primary"
-            href="https://github.com/JasonLewis007"
-          >
-            Visit JasonLewis007 <ArrowUpRight size={18} aria-hidden="true" />
-          </ExternalLink>
+          <a className="button primary" href={`mailto:${contact.email}`}>
+            Email Jason <ArrowUpRight size={18} aria-hidden="true" />
+          </a>
           <p className="location">
             <MapPin size={15} aria-hidden="true" /> Charlotte, North Carolina
           </p>
         </div>
         <div className="contact-options">
-          {contactChannels.map(([Icon, title, description]) => (
-            <section className="contact-option" key={title}>
-              <Icon size={21} aria-hidden="true" />
-              <div>
-                <h2>
-                  {title} <span>NOT YET PROVIDED</span>
-                </h2>
-                <p>{description}</p>
-              </div>
-            </section>
-          ))}
+          <section className="contact-option">
+            <Mail size={21} aria-hidden="true" />
+            <div>
+              <h2>Business email</h2>
+              <p>
+                <a
+                  className="text-link contact-address"
+                  href={`mailto:${contact.email}`}
+                >
+                  {contact.email}
+                </a>
+              </p>
+            </div>
+          </section>
+          <section className="contact-option">
+            <ContactRound size={21} aria-hidden="true" />
+            <div>
+              <h2>LinkedIn</h2>
+              <p>
+                <ExternalLink className="text-link" href={contact.linkedIn}>
+                  Connect with Jason Lewis{" "}
+                  <ArrowUpRight size={16} aria-hidden="true" />
+                </ExternalLink>
+              </p>
+            </div>
+          </section>
+          <section className="contact-option">
+            <CodeXml size={21} aria-hidden="true" />
+            <div>
+              <h2>GitHub</h2>
+              <p>
+                <ExternalLink className="text-link" href={contact.github}>
+                  Explore JasonLewis007{" "}
+                  <ArrowUpRight size={16} aria-hidden="true" />
+                </ExternalLink>
+              </p>
+            </div>
+          </section>
+          <section className="contact-option">
+            <FileText size={21} aria-hidden="true" />
+            <div>
+              <h2>
+                Résumé <span>NOT YET PROVIDED</span>
+              </h2>
+              <p>A reviewed, public résumé will be added here.</p>
+            </div>
+          </section>
         </div>
       </div>
       <p className="disclosure">
-        This site does not collect messages or visitor data. Contact options
-        become available only after their details are verified.
+        Email links open your email application. This site has no contact form
+        and does not collect messages. LinkedIn and GitHub open in a new tab.
       </p>
     </div>
   );

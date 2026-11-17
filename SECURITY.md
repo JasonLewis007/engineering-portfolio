@@ -4,7 +4,7 @@
 
 This is a public static website. It has no backend, database, authentication, sessions, visitor forms, analytics, trackers, third-party scripts, or application cookies/storage. No secrets or personal contact information are required to run it. Anything shipped in HTML, JavaScript, CSS, public assets, or build-time `VITE_*` variables is public.
 
-React's normal text rendering is used throughout. Do not introduce `dangerouslySetInnerHTML`, `eval`, `new Function`, arbitrary HTML insertion, or untrusted script execution. The external-link helper parses URLs and restricts them to HTTPS GitHub destinations. External new-tab links use `noopener noreferrer` and announce that behavior to assistive technology. Route parameters are matched against local typed project data and unknown values show a 404 page.
+React's normal text rendering is used throughout. Do not introduce `dangerouslySetInnerHTML`, `eval`, `new Function`, arbitrary HTML insertion, or untrusted script execution. The external-link helper parses URLs and restricts them to HTTPS GitHub and www.linkedin.com destinations, rejecting embedded credentials and nonstandard ports. Business email uses explicit `mailto:` links; mail is handled by the visitor’s email application. Owner-supplied email and LinkedIn details are intentionally public. External new-tab links use `noopener noreferrer` and announce that behavior to assistive technology. Route parameters are matched against local typed project data and unknown values show a 404 page.
 
 ## Production Content Security Policy
 

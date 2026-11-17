@@ -36,3 +36,7 @@ The accessibility scan initially identified a wordmark name/visible-label mismat
 5. Confirm all professional content, contact destinations, and confidentiality requirements with the owner.
 
 The GitHub Actions workflow, GitHub Pages settings, production HTTPS behavior, hosting response headers, and published URL have not been exercised. No push, deployment, visibility change, or external repository setting change was performed. See `SECURITY.md` for meta CSP and static-host limitations.
+
+## Contact details update
+
+Owner-supplied business email and LinkedIn were added to the contact page, with LinkedIn links also on About and in the footer. `npm run build` and `npm run lint` passed. Browser checks verified the exact `mailto:` and HTTPS LinkedIn destinations, new-tab link protections, no horizontal overflow, and no browser errors. Four axe scans (About and Contact at 320 and 1440 pixels) reported zero WCAG 2/2.1 A/AA violations. No dependencies changed. The portrait remains pending because its inline chat image was not available as a downloadable workspace file.

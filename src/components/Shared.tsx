@@ -11,7 +11,13 @@ export function ExternalLink({
   className?: string;
 }) {
   const url = new URL(href);
-  if (url.protocol !== "https:" || url.hostname !== "github.com")
+  if (
+    url.protocol !== "https:" ||
+    !["github.com", "www.linkedin.com"].includes(url.hostname) ||
+    url.username ||
+    url.password ||
+    url.port
+  )
     throw new Error("Unsupported external destination");
   return (
     <a

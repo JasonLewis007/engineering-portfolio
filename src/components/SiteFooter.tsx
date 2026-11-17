@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { ExternalLink } from "./Shared";
+import { contact } from "../data/contact";
 export function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -15,7 +16,10 @@ export function SiteFooter() {
           <Link to="/about">About</Link>
           <Link to="/projects">Projects</Link>
           <Link to="/contact">Contact</Link>
-          <ExternalLink href="https://github.com/JasonLewis007">
+          <ExternalLink href={contact.linkedIn}>
+            LinkedIn <ArrowUpRight size={14} aria-hidden="true" />
+          </ExternalLink>
+          <ExternalLink href={contact.github}>
             GitHub <ArrowUpRight size={14} aria-hidden="true" />
           </ExternalLink>
         </nav>
