@@ -81,8 +81,9 @@ export const arAgingProject: Project = {
   category: "RECEIVABLES REPORTING & MODERNIZATION",
   title: "A/R Aging Report Modernization",
   icon: "ar-aging",
+  status: "Deployed in production",
   summary:
-    "Built a C# and .NET 8 receivables reporting application with customer, credit-method, invoice-date, aging, and territory criteria, plus PDF and Excel output and historical reporting.",
+    "Built a production-deployed C# and .NET 8 receivables reporting application with customer, credit-method, invoice-date, aging, and territory criteria, plus PDF and Excel output and historical reporting.",
   stack: ["C#", ".NET 8", "QuestPDF", "Excel export"],
   problem:
     "The previous reporting workflow had incorrect data, Crystal Reports runtime problems, and limitations around historical reporting. Users needed a useful snapshot of open customer receivables and aging to prioritize collections.",
@@ -94,9 +95,9 @@ export const arAgingProject: Project = {
   challenges:
     "Engineering considerations include reporting criteria, aging interpretation, historical context, and consistent preview and export workflows.",
   outcome:
-    "The application provides a snapshot of outstanding customer receivables, open balances, age categories, historical reporting, and PDF and Excel output. The owner reports that it addressed incorrect data and Crystal Reports runtime problems.",
+    "The application is deployed and in production, providing a snapshot of outstanding customer receivables, open balances, age categories, historical reporting, and PDF and Excel output. The owner reports that it addressed incorrect data and Crystal Reports runtime problems.",
   confirmation:
-    "Exact aging rules, credit handling, data validation evidence, historical reconstruction, deployment status, database engine, and Excel library remain unconfirmed. No measured collection or financial improvement is claimed.",
+    "Exact aging rules, credit handling, data validation evidence, historical reconstruction, database engine, and Excel library remain unconfirmed. No measured collection or financial improvement is claimed.",
 };
 export const projects: readonly Project[] = [
   shippingProject,

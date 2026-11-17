@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, FileText, UserRound } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCheck, FileText, UserRound } from "lucide-react";
 import { SectionHeading, TechBadge } from "../components/Shared";
 import { ScreenshotGallery } from "../components/ScreenshotGallery";
 import {
@@ -65,6 +65,9 @@ export function ArAgingCaseStudy({ project }: { project: Project }) {
           className="reporting-context reporting-context-step"
           aria-label="Application purpose"
         >
+          <p className="reporting-deployment">
+            <CheckCheck size={18} aria-hidden="true" /> {project.status}
+          </p>
           <p className="eyebrow">OPEN RECEIVABLES</p>
           <h2>
             Customer balances.

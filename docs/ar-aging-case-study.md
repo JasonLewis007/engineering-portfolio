@@ -4,7 +4,9 @@
 
 Jason Lewis built an A/R Aging application in C# and .NET 8 using QuestPDF and Excel output. It gives a snapshot of customer open receivables categorized by age, supporting overdue-account review and collections prioritization. The owner reports it addressed incorrect reporting data, Crystal Reports runtime issues, and historical-reporting limitations. Criteria include all or particular customers, credit method, invoice date, minimum aging days, and territories. Visible UI also shows sort and territory-grouping controls.
 
-No deployment status, independent ownership, SQL engine, UI framework, Excel library, aging formula, historical reconstruction mechanism, runtime root cause, or measured financial benefit is inferred. Do not equate the invoice-date input with a confirmed as-of algorithm.
+The owner subsequently confirmed the application is deployed and in production. The shared project card and case-study hero now show that status.
+
+No independent ownership, SQL engine, UI framework, Excel library, aging formula, historical reconstruction mechanism, runtime root cause, or measured financial benefit is inferred. Do not equate the invoice-date input with a confirmed as-of algorithm.
 
 ## Implementation / Codex maintenance instructions
 
@@ -21,7 +23,7 @@ No deployment status, independent ownership, SQL engine, UI framework, Excel lib
 
 ## Remaining factual questions
 
-Deployment status; full lifecycle/independent ownership; precise aging reference date, boundaries and credit handling; historical balance reconstruction; validation evidence for corrected data; database/UI/Excel library; employer publication permission. No invented metrics or guarantees.
+Full lifecycle/independent ownership; precise aging reference date, boundaries and credit handling; historical balance reconstruction; validation evidence for corrected data; database/UI/Excel library; employer publication permission. No invented metrics or guarantees.
 
 ## Local preview
 
