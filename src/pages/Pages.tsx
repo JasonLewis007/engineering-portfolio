@@ -7,6 +7,7 @@ import {
   Mail,
   ContactRound,
   FileText,
+  Download,
   Code2,
 } from "lucide-react";
 import {
@@ -19,7 +20,9 @@ import { ProjectCard } from "../components/ProjectCard";
 import { CaseStudyLayout } from "../components/CaseStudyLayout";
 import { projects } from "../data/projects";
 import { contact } from "../data/contact";
+import { experienceEntries, skillCategories } from "../data/professional";
 import portraitUrl from "../assets/jason-lewis.jpg";
+import resumeUrl from "../assets/jason-lewis-resume.pdf?url";
 function PageHeading({
   eyebrow,
   title,
@@ -148,111 +151,45 @@ export function Experience() {
         title="Engineering close to the business."
         description="Hands-on enterprise software work connecting applications, data, and the operational processes they support."
       />
-      <article className="experience-card">
-        <div className="experience-meta">
-          <span className="eyebrow">CURRENT ENGINEERING CONTEXT</span>
-          <h2>HarperLove Adhesives LLC</h2>
-          <p>Enterprise application & workflow engineering</p>
-          <div className="confirmation">
-            <p>
-              <strong>Details to confirm</strong>
-            </p>
-            <p>
-              Official job title and employment dates have not been supplied.
-            </p>
-          </div>
-        </div>
-        <div className="experience-body">
-          <h3>Applications, data, and connected workflows.</h3>
-          <p>
-            The engineering context spans shipping operations, reporting
-            modernization, manufacturing, production, inventory, and ERP-related
-            workflows.
-          </p>
-          <ul>
-            <li>
-              Enterprise application development and modernization with C#,
-              .NET, WPF, and XAML.
-            </li>
-            <li>
-              SQL Server and T-SQL work supporting business-critical data and
-              reporting workflows.
-            </li>
-            <li>
-              Legacy application contexts involving Access/VBA and VB.NET.
-            </li>
-            <li>
-              Application integrations and workflow engineering across
-              operational systems.
-            </li>
-            <li>
-              Maintainability, troubleshooting, and careful handling of business
-              information.
-            </li>
-          </ul>
-          <p className="muted">
-            This describes the supplied engineering context. Formal title,
-            dates, individual ownership, and specific delivery outcomes need
-            confirmation.
-          </p>
-          <Link className="text-link" to="/projects">
-            Explore related engineering work{" "}
-            <ArrowRight size={16} aria-hidden="true" />
-          </Link>
-        </div>
-      </article>
+      <div className="experience-list">
+        {experienceEntries.map((entry) => (
+          <article className="experience-card" key={entry.employer}>
+            <div className="experience-meta">
+              <span className="eyebrow">{entry.context}</span>
+              <h2>{entry.employer}</h2>
+              <p className="experience-role">{entry.title}</p>
+              <p>{entry.period}</p>
+            </div>
+            <div className="experience-body">
+              <h3>{entry.heading}</h3>
+              <p>{entry.summary}</p>
+              <ul>
+                {entry.responsibilities.map((responsibility) => (
+                  <li key={responsibility}>{responsibility}</li>
+                ))}
+              </ul>
+              <Link className="text-link" to="/projects">
+                Explore engineering case studies{" "}
+                <ArrowRight size={16} aria-hidden="true" />
+              </Link>
+            </div>
+          </article>
+        ))}
+      </div>
       <CallToAction />
     </div>
   );
 }
-const categories = [
-  [
-    "Languages",
-    ["C#", "T-SQL", "VB.NET", "VBA", "TypeScript", "JavaScript"],
-    "Application logic, database programming, and web interfaces.",
-  ],
-  [
-    ".NET & desktop engineering",
-    [".NET 8", "WPF", "XAML"],
-    "Enterprise desktop applications and modernization.",
-  ],
-  [
-    "Frontend & web development",
-    ["React", "TypeScript", "JavaScript", "HTML", "CSS", "Vite"],
-    "Responsive, accessible interfaces—including this portfolio.",
-  ],
-  [
-    "Databases & data engineering",
-    ["SQL Server", "T-SQL", "Access"],
-    "Data workflows, reporting, and business rules.",
-  ],
-  [
-    "Enterprise integrations & reporting",
-    ["REST APIs", "ERP integrations", "QuestPDF", "Reporting workflows"],
-    "Connected applications and document-generation work. Specific delivery status is noted in case studies.",
-  ],
-  [
-    "Development tools & practices",
-    [
-      "Git",
-      "GitHub",
-      "Troubleshooting",
-      "Maintainability",
-      "Security-conscious design",
-    ],
-    "Practical tools and habits for understandable, maintainable software.",
-  ],
-] as const;
 export function Skills() {
   return (
     <div className="container page-content">
       <PageHeading
         eyebrow="TECHNICAL TOOLKIT"
         title="The right tools. Applied with purpose."
-        description="A practical toolkit spanning enterprise desktop applications, data engineering, integrations, and modern frontend development."
+        description="Enterprise software engineering centered on C#/.NET, WPF/XAML, SQL Server, and modernization—with full-stack development, AI-assisted workflows, and supporting infrastructure expertise."
       />
       <div className="skills-grid">
-        {categories.map(([title, skills, description], index) => (
+        {skillCategories.map(({ title, skills, description }, index) => (
           <section className="skill-card" key={title}>
             <span className="skill-index">
               0{index + 1} <Code2 size={19} aria-hidden="true" />
@@ -339,10 +276,18 @@ export function Contact() {
           <section className="contact-option">
             <FileText size={21} aria-hidden="true" />
             <div>
-              <h2>
-                Résumé <span>NOT YET PROVIDED</span>
-              </h2>
-              <p>A reviewed, public résumé will be added here.</p>
+              <h2>Résumé</h2>
+              <p>
+                My experience, technical expertise, and education in a two-page
+                PDF.
+              </p>
+              <a
+                className="text-link"
+                href={resumeUrl}
+                download="Jason_Lewis_Resume.pdf"
+              >
+                Download résumé (PDF) <Download size={16} aria-hidden="true" />
+              </a>
             </div>
           </section>
         </div>

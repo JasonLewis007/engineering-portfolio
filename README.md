@@ -29,6 +29,7 @@ Preview serves the production artifact at `http://localhost:4173/engineering-por
 - `src/App.tsx`: routes, page titles, route-change scroll and focus handling.
 - `src/components/`: header, accessible mobile disclosure navigation, footer, section heading, project card, badges, calls to action, conceptual engineering illustration, and case-study layout.
 - `src/data/projects.ts`: the single typed source for project summaries, technologies, case-study sections, and confirmation notes.
+- `src/data/professional.ts`: typed skills categories and engineering experience, including AI-assisted development tools and responsibilities.
 - `src/types/project.ts`: project contract.
 - `src/assets/jason-lewis.jpg`: owner-supplied portrait, bundled locally with no third-party image requests.
 - `src/pages/`: homepage and all primary pages, project detail routes, and 404 handling.
@@ -69,10 +70,14 @@ When approved:
 
 The build job has read-only repository access and does not retain checkout credentials. Only the deployment job receives `pages: write` and `id-token: write`; no PAT or deploy secret is required. Official actions are pinned to full commit SHAs. Dependabot checks npm and action dependencies weekly. The workflow is prepared but has not been executed or verified on GitHub.
 
-## Content requiring confirmation
+## Professional content
 
-- A reviewed public résumé remains to be supplied. Business email and LinkedIn were supplied by the owner and are active contact links.
-- Official title and employment dates at HarperLove Adhesives LLC.
+Skills and engineering role descriptions are based on the owner-supplied `Jason_Lewis_Resume_10_9_26.docx`, with HarperLove listed as Software Engineer / IT Specialist (2023–Present) and Full Stack Solutions LLC as Full Stack Developer (2022–2023).
+
+The owner-supplied public résumé is bundled in `src/assets/jason-lewis-resume.pdf` and linked for download from Contact. Replace that file to update the download, then rebuild. The PDF includes the phone number supplied in the résumé. Business email and LinkedIn are active contact links.
+
+Remaining confirmations:
+
 - Individual project ownership/responsibilities, implementation and deployment status, and approved public examples or outcomes.
 - Which VOC/HAP reporting, PDF, recipient-management, and email-delivery capabilities are implemented, tested, and deployed.
 

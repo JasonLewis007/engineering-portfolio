@@ -47,3 +47,16 @@ Owner-supplied business email and LinkedIn were added to the contact page, with 
 Added the owner-supplied 400 × 400 JPEG to the About profile panel, preserving the original image bytes. The file is approximately 23 KB and contains no EXIF fields. Vite bundles it locally with a hashed asset URL compatible with the repository base path. Explicit dimensions reserve layout space; responsive sizing preserves its square proportions and alt text identifies Jason Lewis.
 
 `npm run build` and `npm run lint` passed. Production browser checks verified successful image decoding at its original dimensions, the correct base-prefixed asset URL, no horizontal overflow, and no console/CSP errors at 1440 and 320 pixels. Both About-page axe scans reported zero WCAG 2/2.1 A/AA violations. Desktop and mobile screenshots were visually reviewed. No dependency or deployment changes were made.
+
+## Skills and engineering experience draft
+
+Expanded Skills to nine typed categories in `src/data/professional.ts`, keeping .NET architecture, databases, and full-stack development first. Added the owner-supplied AI tools and their development uses, reporting technologies, platforms, delivery practices, and infrastructure expertise. Updated Experience from `Jason_Lewis_Resume_10_9_26.docx`: HarperLove Software Engineer / IT Specialist (2023–Present) and Full Stack Solutions LLC Full Stack Developer (2022–2023). Removed the superseded title/date placeholders.
+
+`npm run build`, `npm run lint`, and `git diff --check` passed. Production browser checks confirmed both routes and reloads, nine skill cards, both experience entries, exact supplied role/date and AI-tool text, and no horizontal overflow at 320, 768, and 1440 pixels. Six axe scans reported zero WCAG 2/2.1 A/AA violations. No browser errors were observed. Desktop Skills and mobile Experience screenshots were visually reviewed. No dependencies were changed. This update was validated locally. No deployment or publication was performed.
+
+
+## Résumé download draft
+
+Connected the owner-uploaded `Jason_Lewis_Resume_Revised_v3.pdf` to the Contact page's Download résumé (PDF) link. The original two-page PDF is bundled locally with a Vite-generated, base-prefixed URL and an explicit download filename of `Jason_Lewis_Resume.pdf`.
+
+`npm run build`, `npm run lint`, and `git diff --check` passed. Desktop (1440px) and mobile (320px) browser checks activated the link by keyboard, verified the downloaded filename and exact file-byte match to the supplied PDF, and confirmed HTTP 200 with an application/pdf content type. Both Contact-page axe scans reported zero WCAG 2/2.1 A/AA violations; no horizontal overflow or browser errors were observed. The supplied PDF is unencrypted, has two pages, and PDF inspection reports no JavaScript. No dependencies were changed. The portfolio updates were validated locally. No deployment or publication was performed.
