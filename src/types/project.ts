@@ -7,7 +7,7 @@ export interface Project {
   title: string;
   summary: string;
   stack: readonly string[];
-  icon: "shipping" | "reporting" | "manufacturing";
+  icon: "shipping" | "reporting" | "daily-reporting" | "manufacturing";
   problem: string;
   responsibilities: string;
   approach: string;

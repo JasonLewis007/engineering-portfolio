@@ -50,12 +50,38 @@ export const reportingProject: Project = {
   confirmation:
     "Confirm current stack details and employer permission before expanding technical or publication claims. Runtime root cause, email transport, and measured improvements have not been supplied.",
 };
+export const dailyShippingProject: Project = {
+  slug: "daily-shipping-report",
+  number: "03",
+  category: "SHAREHOLDER REPORTING & MODERNIZATION",
+  title: "Daily Shipping & Budget Reporting",
+  icon: "daily-reporting",
+  status: "Deployed in production",
+  summary:
+    "Designed, built, tested, and deployed a SQL-backed shipping and budget reporting application for shareholders, with current-month reporting and historical review, replacing a legacy VB reporting system.",
+  stack: ["C#", ".NET 8", "SQL", "QuestPDF"],
+  problem:
+    "Shareholders need to review shipped, ordered, potential, and budget information for the month. The legacy VB application had reporting-day problems, Crystal Reports runtime issues, and no historical-data review.",
+  responsibilities:
+    "Jason Lewis designed, built, tested, and deployed the replacement application into production.",
+  approach:
+    "The application brings report-date selection, prior-workday context, shipping and budget previews, historical review, and PDF export into a desktop reporting workflow.",
+  architecture:
+    "C# and .NET 8 support the application, a SQL database provides its data background, and QuestPDF supports report output. The workflow diagram is conceptual, not an infrastructure topology.",
+  challenges:
+    "Engineering considerations include reporting-period clarity, shipped-versus-ordered context, current and historical review, and a consistent path from report preview to PDF output.",
+  outcome:
+    "A production-deployed replacement supports shareholder shipping and budget reporting and historical review, addressing the scope that the legacy VB application could not support adequately.",
+  confirmation:
+    "The exact potential formula, date/workday rules, database engine, runtime root cause, and any measured improvements require supporting details. Screenshot files need privacy review before integration.",
+};
 export const projects: readonly Project[] = [
   shippingProject,
   reportingProject,
+  dailyShippingProject,
   {
     slug: "manufacturing-erp",
-    number: "03",
+    number: "04",
     category: "DATA & BUSINESS WORKFLOWS",
     title: "Manufacturing & ERP Workflow Engineering",
     icon: "manufacturing",

@@ -10,10 +10,10 @@ import type { CaseStudyScreenshot } from "../types/caseStudy";
 
 import "../styles/screenshot-gallery.css";
 
-type ImageDirectory = "shipping" | "voc-hap";
+type ImageDirectory = "shipping" | "voc-hap" | "daily-shipping";
 function screenshotUrl(directory: ImageDirectory, asset: string) {
   if (
-    !["shipping", "voc-hap"].includes(directory) ||
+    !["shipping", "voc-hap", "daily-shipping"].includes(directory) ||
     !/^[a-z0-9][a-z0-9-]*\.png$/.test(asset)
   ) {
     throw new Error("Unsupported local screenshot path");

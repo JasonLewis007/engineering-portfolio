@@ -105,3 +105,19 @@ Extracted the source package outside the public directory; read its task, conten
 - Desktop/mobile reporting hero and viewer screenshots visually reviewed.
 
 No unit-test suite or `npm test` script is configured. Browser checks used the existing environment's Playwright/Chromium and temporary axe tooling; no application dependencies changed. The owner subsequently authorized committing and pushing the implementation. No deployment, publication, or GitHub settings changes were performed.
+
+## Daily Shipping & Budget Reporting — November 17, 2026
+
+- `npm run build` and `npm run lint`: passed. `git diff --check`: passed.
+- Chromium checks of the production preview at widths 1440, 768, 375, and 320: reporting route and refresh, Home/Projects links, four-card responsive layout, image loading/dimensions, section navigation and reduced-motion behavior passed with no horizontal overflow.
+- Five reviewed AI-assisted privacy-edited PNGs loaded from the local daily-shipping asset directory. Exported aspect ratios are retained. Public provenance text and alt text disclose the edits. Visual and OCR review found no remaining financial amounts, full dates, email addresses, or long numeric identifiers; original source captures are excluded. Built asset hashes match reviewed files; no ZIP is in the build.
+- Screenshot dialog: previous/next arrow navigation and wraparound, Tab/Shift+Tab containment, Escape dismissal, focus restoration, and single-image PDF behavior passed. Existing shipping and VOC/HAP viewers also passed focused regression checks.
+- Eight automated WCAG A/AA scans (page and open dialog at each width): zero violations. Automated scans do not replace human screen-reader review.
+- Representative About, Experience, Skills, Contact, manufacturing, and missing-page routes passed. No browser console/page errors or failed HTTP responses occurred.
+- No dedicated unit-test command exists. No commit, push, deployment, or publication was performed.
+
+### Fictional sample report update
+
+Replaced the fifth, heavily masked PDF view with a locally rendered report illustration containing entirely fictional names, dates, and values. Verified row and aggregate totals and the sales/budget bar proportions; reviewed the final image visually. Both the image and portfolio caption disclose its fictional origin and sample-only potential calculation. The four application workflow renders retain their privacy-edit disclosure.
+
+Production build and ESLint passed. Repeated browser checks passed at 1440, 768, 375, and 320 pixels, including five image loads with matching dimensions, dialog keyboard behavior, direct-route refresh, Home/Projects integration, existing case-study viewers, and eight page/dialog accessibility scans with zero violations. No commit, push, or publication performed.

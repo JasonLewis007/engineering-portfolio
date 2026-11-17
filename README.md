@@ -123,6 +123,18 @@ The images are AI-assisted privacy-edited renders and are identified as such on 
 
 After building, preview the page at `http://localhost:4173/engineering-portfolio/#/projects/reporting-modernization` using `npm run preview -- --port 4173`.
 
+## Daily shipping and budget reporting
+
+The daily shareholder-reporting case study is at `/#/projects/daily-shipping-report`. It covers the owner's confirmed design/build/test/deployment role, legacy VB reporting-day and Crystal Reports runtime problems, current and historical reporting, and PDF output. Technologies are limited to the confirmed C#, .NET 8, SQL, and QuestPDF stack; the UI framework and database engine are not inferred.
+
+- `src/pages/DailyShippingCaseStudy.tsx`: dedicated case study.
+- `src/data/dailyShippingCaseStudy.ts`: report measures, engineering considerations, and five reviewed image entries.
+- `public/images/daily-shipping/`: four AI-assisted privacy-edited workflow renders and one clearly labeled fictional sample report. The sample uses invented figures and no company data.
+- `src/styles/daily-shipping-case-study.css`: case-specific presentation, alongside shared reporting and gallery styles.
+- `docs/daily-shipping-case-study.md`: confirmed content and remaining implementation questions.
+
+The shared project list now contains four case studies. Shipping remains the flagship; the desktop gallery uses two columns for the four-card set. Potential is described as shipped-versus-ordered activity that can change daily, without inventing a formula or measured improvement.
+
 ## Validation
 
 Production build, strict TypeScript checking, ESLint, dependency audits, and local browser checks are described in `VALIDATION.md`. Automated checks do not replace final keyboard/screen-reader review or owner confirmation of professional content. See `SECURITY.md` for the security model and GitHub Pages limitations.
