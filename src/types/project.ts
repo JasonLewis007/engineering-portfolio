@@ -1,5 +1,7 @@
 export interface Project {
   slug: string;
+  featured?: boolean;
+  status?: string;
   number: string;
   category: string;
   title: string;

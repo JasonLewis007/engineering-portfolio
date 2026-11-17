@@ -1,29 +1,32 @@
 import type { Project } from "../types/project";
+export const shippingProject: Project = {
+  slug: "enterprise-shipping-management-suite",
+  featured: true,
+  status: "Fully deployed in production",
+  number: "01",
+  category: "ENTERPRISE APPLICATIONS",
+  title: "Enterprise Shipping Management Suite",
+  icon: "shipping",
+  summary:
+    "End-to-end ownership of two integrated production applications, coordinated through SQL Server for truck arrival tracking and shipping verification. Since implementation, the owner has observed no wrong-load errors.",
+  stack: ["C#", ".NET 8", "WPF", "XAML", "SQL Server", "T-SQL"],
+  problem:
+    "Shipping operations require accurate shipment identification, driver check-in, endorsement confirmation, shipment verification, document readiness, and communication between drivers and shipping employees.",
+  responsibilities:
+    "Jason Lewis independently planned, designed, architected, implemented, integrated, tested, troubleshot, and deployed the suite as its end-to-end software engineer and application owner.",
+  approach:
+    "A touchscreen-oriented Driver Check-In Kiosk and an employee-facing Shipping Dashboard coordinate shipping information through SQL Server.",
+  architecture:
+    "Two C#/.NET 8 WPF/XAML applications share shipping information through SQL Server, with T-SQL supporting database integration.",
+  challenges:
+    "Coordinate distinct user interfaces, shipment-specific business rules, consistent shipment status, clear touchscreen interactions, visible exceptions, and shipment completion and restoration.",
+  outcome:
+    "Recorded check-in events support truck arrival measurement and visibility. Since implementation, wrong-load errors have been eliminated according to the project owner's operational observations; this is not an audited statistic or controlled experimental result.",
+  confirmation:
+    "Screenshot publication permission remains a separate review. Four kiosk captures are withheld until redaction is complete.",
+};
 export const projects: readonly Project[] = [
-  {
-    slug: "enterprise-shipping",
-    number: "01",
-    category: "ENTERPRISE APPLICATIONS",
-    title: "Enterprise Shipping Management Suite",
-    icon: "shipping",
-    summary:
-      "Connecting driver check-in, order validation, and shipping operations in a cohesive enterprise workflow.",
-    stack: ["C#", ".NET 8", "WPF", "XAML", "SQL Server"],
-    problem:
-      "Shipping operations bring together driver information, order requirements, and shipment validation. The engineering problem is to make those steps understandable and consistent across a kiosk and an operational dashboard.",
-    responsibilities:
-      "Engineering work spans driver check-in, order lookup and validation, item and weight confirmation, license endorsement requirements, and driver, truck, and trailer information.",
-    approach:
-      "The suite integrates a driver check-in kiosk with an operational shipping dashboard. Its workflows bring order requirements and shipment confirmation into the same application context.",
-    architecture:
-      "C# and .NET 8 support the application, with WPF and XAML for desktop interfaces and SQL Server for data workflows. This public overview intentionally omits internal topology, schemas, and infrastructure.",
-    challenges:
-      "The central tradeoff is balancing a straightforward driver-facing flow with detailed operational validation. Handling incomplete information and keeping confirmation steps clear are key engineering considerations; implementation details require confirmation.",
-    outcome:
-      "The described scope brings shipping validation and operational visibility into a shared suite. Deployment status, adoption, and measured outcomes are not confirmed and are not represented as completed results.",
-    confirmation:
-      "Confirm individual ownership, deployment status, and any public outcomes before expanding this case study.",
-  },
+  shippingProject,
   {
     slug: "reporting-modernization",
     number: "02",

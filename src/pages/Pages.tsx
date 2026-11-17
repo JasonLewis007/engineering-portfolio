@@ -16,6 +16,7 @@ import {
   CallToAction,
   ExternalLink,
 } from "../components/Shared";
+import { ShippingCaseStudy } from "./ShippingCaseStudy";
 import { ProjectCard } from "../components/ProjectCard";
 import { CaseStudyLayout } from "../components/CaseStudyLayout";
 import { projects } from "../data/projects";
@@ -141,7 +142,12 @@ export function Projects() {
 export function ProjectDetails() {
   const { slug } = useParams();
   const project = projects.find((item) => item.slug === slug);
-  return project ? <CaseStudyLayout project={project} /> : <NotFound />;
+  if (!project) return <NotFound />;
+  return project.icon === "shipping" ? (
+    <ShippingCaseStudy project={project} />
+  ) : (
+    <CaseStudyLayout project={project} />
+  );
 }
 export function Experience() {
   return (

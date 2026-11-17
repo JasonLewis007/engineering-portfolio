@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { SiteHeader } from "./components/SiteHeader";
 import { SiteFooter } from "./components/SiteFooter";
 import { Home } from "./pages/Home";
@@ -55,6 +55,15 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route
+            path="/projects/enterprise-shipping"
+            element={
+              <Navigate
+                to="/projects/enterprise-shipping-management-suite"
+                replace
+              />
+            }
+          />
           <Route path="/projects/:slug" element={<ProjectDetails />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/skills" element={<Skills />} />

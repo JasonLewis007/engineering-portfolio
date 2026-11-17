@@ -1121,3 +1121,12 @@ svg {
   color: var(--text);
   font-weight: 600;
 }
+
+.project-featured {
+  border-color: #496d9f;
+}
+.project-body > p.project-status {
+  color: #abe2c1;
+  font-size: 11px;
+  margin-top: 9px;
+}

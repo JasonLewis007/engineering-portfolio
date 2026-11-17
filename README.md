@@ -38,13 +38,13 @@ Preview serves the production artifact at `http://localhost:4173/engineering-por
 - `index.html`: metadata and restrictive production meta CSP.
 - `.github/`: Dependabot and a manual-only Pages deployment workflow.
 
-React safely renders text; there is no raw HTML rendering or runtime content fetching. The external-link component accepts only HTTPS GitHub and www.linkedin.com destinations, with embedded credentials and nonstandard ports rejected. Owner-supplied contact details live in `src/data/contact.ts`; email uses explicit `mailto:` links. There are no external fonts, analytics, embeds, form submissions, cookies, or application storage. All illustrations are conceptual local CSS/SVG visuals, not screenshots or representations of proprietary architecture.
+React safely renders text; there is no raw HTML rendering or runtime content fetching. The external-link component accepts only HTTPS GitHub and www.linkedin.com destinations, with embedded credentials and nonstandard ports rejected. Owner-supplied contact details live in `src/data/contact.ts`; email uses explicit `mailto:` links. There are no external fonts, analytics, embeds, form submissions, cookies, or application storage. The homepage illustration and shipping integration diagram are conceptual local visuals. The shipping case study also includes three reviewed, redacted application screenshots and four withheld-image placeholders; see `docs/shipping-image-review.md` for the review and publication considerations.
 
 ## Routing and GitHub Pages
 
 `HashRouter` supports direct links and refreshes on static hosting, for example:
 
-`https://jasonlewis007.github.io/engineering-portfolio/#/projects/enterprise-shipping`
+`https://jasonlewis007.github.io/engineering-portfolio/#/projects/enterprise-shipping-management-suite`
 
 Routes are `/`, `/about`, `/projects`, `/projects/:slug`, `/experience`, `/skills`, `/contact`, and a catch-all 404. Unknown project slugs also show the 404 page. The hash is required; a bare server path such as `/engineering-portfolio/about` is not a supported deep link.
 
@@ -78,10 +78,32 @@ The owner-supplied public résumé is bundled in `src/assets/jason-lewis-resume.
 
 Remaining confirmations:
 
-- Individual project ownership/responsibilities, implementation and deployment status, and approved public examples or outcomes.
+- Ownership, delivery status, and public outcomes for the remaining case studies; shipping ownership, production deployment, and observed outcomes are confirmed in the latest task.
 - Which VOC/HAP reporting, PDF, recipient-management, and email-delivery capabilities are implemented, tested, and deployed.
 
 No degrees, certifications, dates, years of experience, metrics, customer names, testimonials, availability claims, or salary information were invented. Case studies deliberately identify unverified details. Review all enterprise descriptions for employer/publication permission before publishing.
+
+## Shipping flagship case study
+
+The dedicated shipping case study is at `/#/projects/enterprise-shipping-management-suite` (with the configured repository base path). The earlier `/#/projects/enterprise-shipping` URL redirects to it. Shared project data marks it as the flagship on Home and Projects.
+
+- `src/pages/ShippingCaseStudy.tsx`: ownership, production status, application workflows, architecture, challenges, outcomes, technology stack, and closing links.
+- `src/data/shippingCaseStudy.ts`: typed screenshot slots, workflow explanations, ownership stages, and challenges.
+- `src/components/ScreenshotGallery.tsx`: reviewed screenshots, withheld-image placeholders, and a native dialog viewer with focus containment, Escape, close, previous/next controls, and arrow-key navigation.
+- `src/components/ShippingArchitecture.tsx`: labeled conceptual integration diagram.
+- `src/styles/shipping-case-study.css`: responsive case-study presentation; existing global reduced-motion handling remains in force.
+- `public/images/shipping/`: the three reviewed dashboard PNGs. Kiosk candidates are not shipped because redaction is incomplete.
+
+Ownership, production deployment, and operational observations were supplied in the owner's shipping task. The older source document's uncertainty about those facts is superseded. Wrong-load elimination is explicitly an owner-observed production outcome; no percentage, deployment date, shipment count, or financial/time saving is claimed. Driver endorsement confirmation is self-attestation. Employer publication permission and corrected kiosk screenshots remain separate from the completed application implementation.
+
+To inspect the production build locally:
+
+```sh
+npm run build
+npm run preview -- --port 4173
+```
+
+Open `http://localhost:4173/engineering-portfolio/#/projects/enterprise-shipping-management-suite`.
 
 ## Validation
 

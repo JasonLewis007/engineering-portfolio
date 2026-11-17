@@ -10,7 +10,9 @@ const icons = {
 export function ProjectCard({ project }: { project: Project }) {
   const Icon = icons[project.icon];
   return (
-    <article className={`project-card project-${project.icon}`}>
+    <article
+      className={`project-card project-${project.icon}${project.featured ? " project-featured" : ""}`}
+    >
       <div className="project-art" aria-hidden="true">
         <span className="project-number">PROJECT / {project.number}</span>
         <div className="art-orbit">
@@ -25,7 +27,11 @@ export function ProjectCard({ project }: { project: Project }) {
         </span>
       </div>
       <div className="project-body">
-        <p className="eyebrow">{project.category}</p>
+        <p className="eyebrow">
+          {project.featured ? "FLAGSHIP / " : ""}
+          {project.category}
+        </p>
+        {project.status && <p className="project-status">{project.status}</p>}
         <h3>
           <Link to={`/projects/${project.slug}`}>
             {project.title}
