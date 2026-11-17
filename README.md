@@ -38,7 +38,7 @@ Preview serves the production artifact at `http://localhost:4173/engineering-por
 - `index.html`: metadata and restrictive production meta CSP.
 - `.github/`: Dependabot and a manual-only Pages deployment workflow.
 
-React safely renders text; there is no raw HTML rendering or runtime content fetching. The external-link component accepts only HTTPS GitHub and www.linkedin.com destinations, with embedded credentials and nonstandard ports rejected. Owner-supplied contact details live in `src/data/contact.ts`; email uses explicit `mailto:` links. There are no external fonts, analytics, embeds, form submissions, cookies, or application storage. The homepage illustration and shipping integration diagram are conceptual local visuals. The shipping case study includes three reviewed, redacted application screenshots and four withheld-image placeholders. The VOC/HAP case study includes nine AI-assisted, privacy-edited screenshot renders with a visible provenance disclosure. See `docs/shipping-image-review.md` and `docs/voc-hap-case-study.md` for image review and publication considerations.
+React safely renders text; there is no raw HTML rendering or runtime content fetching. The external-link component accepts only HTTPS GitHub and www.linkedin.com destinations, with embedded credentials and nonstandard ports rejected. Owner-supplied contact details live in `src/data/contact.ts`; email uses explicit `mailto:` links. There are no external fonts, analytics, embeds, form submissions, cookies, or application storage. The homepage illustration and shipping integration diagram are conceptual local visuals. The shipping case study includes three reviewed, redacted dashboard captures and four AI-assisted privacy-edited kiosk renders with a visible provenance disclosure. The VOC/HAP case study includes nine AI-assisted, privacy-edited screenshot renders with a visible provenance disclosure. See `docs/shipping-image-review.md` and `docs/voc-hap-case-study.md` for image review and publication considerations.
 
 ## Routing and GitHub Pages
 
@@ -93,7 +93,7 @@ The dedicated shipping case study is at `/#/projects/enterprise-shipping-managem
 - `src/components/ScreenshotGallery.tsx`: reviewed screenshots, withheld-image placeholders, and a native dialog viewer with focus containment, Escape, close, previous/next controls, and arrow-key navigation.
 - `src/components/ShippingArchitecture.tsx`: labeled conceptual integration diagram.
 - `src/styles/shipping-case-study.css`: responsive case-study presentation; existing global reduced-motion handling remains in force.
-- `public/images/shipping/`: the three reviewed dashboard PNGs. Kiosk candidates are not shipped because redaction is incomplete.
+- `public/images/shipping/`: three reviewed dashboard PNGs and four reviewed privacy-edited kiosk PNGs. Source candidates remain outside the repository.
 
 Ownership, production deployment, and operational observations were supplied in the owner's shipping task. The older source document's uncertainty about those facts is superseded. Wrong-load elimination is explicitly an owner-observed production outcome; no percentage, deployment date, shipment count, or financial/time saving is claimed. Driver endorsement confirmation is self-attestation. Employer publication permission and corrected kiosk screenshots remain separate from the completed application implementation.
 

@@ -131,3 +131,11 @@ Production build and ESLint passed. Repeated browser checks passed at 1440, 768,
 - Both gallery viewers passed arrow-key movement and wraparound, Tab/Shift+Tab containment, Escape, and focus restoration. Twelve automated page/dialog WCAG A/AA scans found zero violations; this does not replace human screen-reader review.
 - Existing daily shipping, VOC/HAP, and flagship shipping viewers, plus About, Experience, Skills, Contact, and manufacturing routes passed focused regressions. No browser errors or failed HTTP responses.
 - No dedicated unit-test suite exists. Deployment/publication remains manual and was not requested.
+
+## Shipping kiosk gallery replacement — November 17, 2026
+
+Replaced all four withheld kiosk slots with reviewed AI-assisted privacy-edited PNGs. Visually inspected every exported image; OCR found no remaining known customer/product labels, operational numbers, or dates. PNG metadata is empty. The page and alt text disclose AI-assisted privacy editing; layout and typography can differ from the supplied originals. The three dashboard captures remain unchanged. Original candidates remain outside public assets.
+
+Build, strict TypeScript, lint, and whitespace checks passed. Production-preview Chromium checks at 1440, 768, 375, and 320 pixels confirmed seven shipping image loads and matching intrinsic dimensions, zero placeholders, direct-route refresh, no horizontal overflow, four-image arrow navigation and wraparound, Tab/Shift+Tab containment, Escape dismissal and focus restoration. Eight page/dialog WCAG A/AA scans returned zero violations. Mobile gallery/dialog screenshots were visually reviewed. Existing AR Aging, Daily Shipping and VOC/HAP viewers and Home/Projects passed regression checks. No browser errors or failed image requests.
+
+The GitHub deployment API remains inaccessible from this environment (HTTP CONNECT 403), so deployment must be run through the existing manual Pages workflow.

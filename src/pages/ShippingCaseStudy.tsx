@@ -158,9 +158,11 @@ export function ShippingCaseStudy({ project }: { project: Project }) {
           shipment verification, and check-in.
         </SectionHeading>
         <p className="gallery-publication-note">
-          The four kiosk screenshots are withheld while remaining operational
-          details are redacted. The workflow descriptions below document the
-          production application.
+          AI-assisted privacy-edited kiosk views. Branding, dates, shipment
+          identifiers, customer and product details, and operational values are
+          concealed. Layout and typography may differ from the original
+          captures; these are not untouched, pixel-exact screenshots. Select an
+          image to enlarge it.
         </p>
         <ScreenshotGallery
           screenshots={kioskScreenshots}

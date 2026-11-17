@@ -6,44 +6,40 @@ export const kioskScreenshots: readonly CaseStudyScreenshot[] = [
     title: "01 / Identify the pickup",
     description:
       "The driver enters a pickup number so the kiosk can retrieve the corresponding shipment. The touchscreen flow starts with one clear task.",
-    alt: "Driver Check-In Kiosk pickup-number entry screen",
-    width: 2048,
-    height: 1222,
-    withheldReason:
-      "The supplied capture still contains a date and possible branding fragments. A fully redacted replacement is needed.",
+    alt: "AI-assisted privacy-edited Driver Check-In Kiosk pickup-number entry screen",
+    width: 1624,
+    height: 969,
+    asset: "kiosk-pickup-lookup.png",
   },
   {
     id: "endorsement",
     title: "02 / Confirm the required endorsement",
     description:
       "Shipment-specific rules prompt the driver to confirm any required specialized endorsement. This is driver self-attestation, not independent government credential verification.",
-    alt: "Driver Check-In Kiosk specialized-endorsement self-attestation screen",
-    width: 2048,
-    height: 1226,
-    withheldReason:
-      "The supplied capture still contains a date and possible branding fragments. A fully redacted replacement is needed.",
+    alt: "AI-assisted privacy-edited Driver Check-In Kiosk specialized-endorsement self-attestation screen",
+    width: 1622,
+    height: 970,
+    asset: "kiosk-endorsement.png",
   },
   {
     id: "pickup-confirmation",
     title: "03 / Verify the shipment",
     description:
-      "The driver reviews pickup information, products, and shipment weight before confirming that the correct shipment has been selected.",
-    alt: "Driver Check-In Kiosk shipment review and pickup-confirmation screen",
-    width: 2048,
-    height: 1232,
-    withheldReason:
-      "Customer and product information, shipment weights, and dates remain visible. The capture is withheld until redaction is complete.",
+      "The driver reviews pickup information, products, and shipment weight before confirming that the correct shipment has been selected. Shipment details, product rows, and weight values are concealed in this privacy-edited view.",
+    alt: "AI-assisted privacy-edited Driver Check-In Kiosk shipment review and pickup-confirmation screen",
+    width: 1616,
+    height: 973,
+    asset: "kiosk-pickup-confirmation.png",
   },
   {
     id: "driver-information",
     title: "04 / Record the check-in",
     description:
       "The driver enters a name, truck number, and optional trailer number. The check-in is recorded in SQL Server and reflected in the Shipping Dashboard’s arrival state.",
-    alt: "Driver Check-In Kiosk driver, truck, and optional trailer information form",
-    width: 2048,
-    height: 1229,
-    withheldReason:
-      "A pickup identifier and date remain visible. A fully redacted replacement is needed.",
+    alt: "AI-assisted privacy-edited Driver Check-In Kiosk driver, truck, and optional trailer information form",
+    width: 1619,
+    height: 972,
+    asset: "kiosk-driver-information.png",
   },
 ];
 

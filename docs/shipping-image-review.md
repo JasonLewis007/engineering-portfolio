@@ -1,24 +1,21 @@
 # Shipping case-study image review
 
-All seven publication candidates were visually inspected at original resolution. The three dashboard files below have no visible business identifiers in this review and have no embedded PNG metadata. This is a visual redaction review, not a statement of employer publication permission. No original unredacted files, source ZIP, or source documents are included in the application.
+## Kiosk replacement review — November 17, 2026
 
-| Source candidate                    | Decision                               | Public asset / reason                                                                 |
-| ----------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------- |
-| `kiosk_01_pickup_lookup.png`        | Withheld; labeled placeholder          | Date remains visible; possible branding fragments remain at the edges of a redaction. |
-| `kiosk_02_endorsement.png`          | Withheld; labeled placeholder          | Date remains visible; possible branding fragments remain at the edges of a redaction. |
-| `kiosk_03_pickup_confirmation.png`  | Withheld; labeled placeholder          | Customer/location and product information, weights, and dates remain visible.         |
-| `kiosk_04_driver_information.png`   | Withheld; labeled placeholder          | Pickup identifier and date remain visible.                                            |
-| `dashboard_01_truck_arrivals.png`   | Visually cleared for local integration | `public/images/shipping/dashboard-truck-arrivals.png`                                 |
-| `dashboard_02_recently_shipped.png` | Visually cleared for local integration | `public/images/shipping/dashboard-recently-shipped.png`                               |
-| `dashboard_03_missing_bol.png`      | Visually cleared for local integration | `public/images/shipping/dashboard-missing-bol.png`                                    |
+The four previously withheld kiosk images have been replaced with reviewed AI-assisted privacy-edited renders based on the supplied source candidates. The entire top header conceals branding fragments and dates; the shipment-review render conceals customer/location, products, dates, quantities and weights; driver information conceals the pickup identifier. Empty form controls and generic workflow prompts remain visible. No fictional shipment data was added.
 
-The dashboard captures preserve their original pixels and aspect ratios. Heavy redaction also obscures operational labels and timestamps; the captions acknowledge this rather than claiming those details are visible. No fictional or recreated application screenshots were generated.
+Each exported PNG was inspected visually at its exported resolution and checked with OCR for residual numbers, dates, known business labels and product details. No sensitive details were found in that review. The exported PNGs contain no embedded metadata. These checks are a privacy review, not a claim of exact visual fidelity: the image model may alter layout, typography, and spacing. Visible page text and alt text disclose AI-assisted privacy editing. Exported aspect ratios are preserved by the gallery.
 
-## Completing the kiosk gallery
+| Public asset | Exported dimensions | SHA-256 |
+| --- | --- | --- |
+| `kiosk-pickup-lookup.png` | 1624 × 969 | `0376e8c6bfcc51530a2a01578d9732a73b356d0f3f3f09d74d23b056ca05ae1c` |
+| `kiosk-endorsement.png` | 1622 × 970 | `8be81e7f6cc976574c4b48e410f66e5d6aa07785a669be2d4ecea0e71f6b5c3b` |
+| `kiosk-pickup-confirmation.png` | 1616 × 973 | `520167f68c00351f404e1d154dde373aef5cdd34c5a811913e69017a746712d7` |
+| `kiosk-driver-information.png` | 1619 × 972 | `62dc364b8c8b07669b99bb8e4dc7d09f674ce313bff70df2fed6ed0927638620` |
 
-Supply replacement PNGs with all branding, business identifiers, customer/location and product information, shipment numbers, weights, dates, and other sensitive details fully concealed. Reinspect every replacement, including image metadata. Only then copy it into `public/images/shipping/` and replace its `withheldReason` with the reviewed `asset` filename in `src/data/shippingCaseStudy.ts`. Update dimensions to match the replacement and verify the image and enlarged view.
+The three existing dashboard PNGs (`dashboard-truck-arrivals.png`, `dashboard-recently-shipped.png`, and `dashboard-missing-bol.png`) remain unchanged and preserve their original reviewed pixels. Business information and some operational indicators are concealed in those supplied redacted captures.
 
-The four current kiosk candidates remain outside the repository and build. The page already includes their workflow descriptions and clearly labeled placeholders.
+Source candidates and source archives remain outside public assets and the repository. Only the four reviewed replacement exports are added. All seven shipping images are available through the existing accessible screenshot viewer; there are no kiosk placeholders remaining.
 
 ## Content authority and publication
 
