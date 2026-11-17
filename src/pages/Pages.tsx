@@ -16,6 +16,7 @@ import {
   CallToAction,
   ExternalLink,
 } from "../components/Shared";
+import { FormularyCaseStudy } from "./FormularyCaseStudy";
 import { ArAgingCaseStudy } from "./ArAgingCaseStudy";
 import { DailyShippingCaseStudy } from "./DailyShippingCaseStudy";
 import { ReportingCaseStudy } from "./ReportingCaseStudy";
@@ -146,6 +147,8 @@ export function ProjectDetails() {
   const { slug } = useParams();
   const project = projects.find((item) => item.slug === slug);
   if (!project) return <NotFound />;
+  if (project.icon === "formulary")
+    return <FormularyCaseStudy project={project} />;
   if (project.icon === "ar-aging")
     return <ArAgingCaseStudy project={project} />;
   if (project.icon === "daily-reporting")

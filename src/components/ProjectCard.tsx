@@ -1,4 +1,11 @@
-import { ArrowUpRight, Truck, FileChartColumn, Factory } from "lucide-react";
+import {
+  ArrowUpRight,
+  Truck,
+  FileChartColumn,
+  Factory,
+  Grid3X3,
+  TrendingUp,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import type { Project } from "../types/project";
 import { TechBadge } from "./Shared";
@@ -8,6 +15,7 @@ const icons = {
   "daily-reporting": FileChartColumn,
   "ar-aging": FileChartColumn,
   manufacturing: Factory,
+  formulary: Grid3X3,
 };
 export function ProjectCard({ project }: { project: Project }) {
   const Icon = icons[project.icon];
@@ -17,9 +25,21 @@ export function ProjectCard({ project }: { project: Project }) {
     >
       <div className="project-art" aria-hidden="true">
         <span className="project-number">PROJECT / {project.number}</span>
-        <div className="art-orbit">
-          <Icon size={52} strokeWidth={1.1} />
-        </div>
+        {project.icon === "formulary" ? (
+          <div className="formulary-card-preview">
+            <span>ƒ(x)</span>
+            <span>
+              <Grid3X3 size={34} />
+            </span>
+            <span>
+              <TrendingUp size={34} />
+            </span>
+          </div>
+        ) : (
+          <div className="art-orbit">
+            <Icon size={52} strokeWidth={1.1} />
+          </div>
+        )}
         <span className="art-label">
           {project.icon === "shipping"
             ? "CONNECTED OPERATIONS"
@@ -29,7 +49,9 @@ export function ProjectCard({ project }: { project: Project }) {
                 ? "SHIPPING / BUDGET"
                 : project.icon === "ar-aging"
                   ? "RECEIVABLES / AGING"
-                  : "SYSTEMS IN SYNC"}
+                  : project.icon === "formulary"
+                    ? "FORMULAS / INVENTORY / VISIBILITY"
+                    : "SYSTEMS IN SYNC"}
         </span>
       </div>
       <div className="project-body">

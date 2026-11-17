@@ -144,6 +144,15 @@ The A/R Aging case study is at `/#/projects/ar-aging-report`. Shared Home and Pr
 - `scripts/generate-ar-aging-samples.mjs`: reproducible fictional report images, using Playwright/Chromium as a separate authoring tool, without adding application dependencies.
 - `docs/ar-aging-case-study.md`: implementation handoff, image review, sample assumptions, and remaining factual questions.
 
+## Formulary & Inventory Hub
+
+New case study at `/#/projects/formulary-inventory-hub`, separate from all five pre-existing project entries. The card follows the supplied preview with formula, inventory-grid, and upward-arrow artwork. The case study covers replacement of backend-only formula entry, production status, the confirmed C# / .NET 8 / SQL Server stack, formula and inventory management, and the documented inventory-check entry point.
+
+- `src/pages/FormularyCaseStudy.tsx` and `src/data/formularyCaseStudy.ts`: dedicated page and typed content.
+- `src/styles/formulary-case-study.css`: card artwork and case-specific styling.
+- `public/images/formulary-inventory/`: three reviewed supplied redacted application images and the clearly labeled fictional reorder-report illustration.
+- `docs/formulary-inventory-case-study.md`: source clarification, image review, implementation details, and factual limitations.
+
 ## Validation
 
 Production build, strict TypeScript checking, ESLint, dependency audits, and local browser checks are described in `VALIDATION.md`. Automated checks do not replace final keyboard/screen-reader review or owner confirmation of professional content. See `SECURITY.md` for the security model and GitHub Pages limitations.

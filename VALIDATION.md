@@ -139,3 +139,13 @@ Replaced all four withheld kiosk slots with reviewed AI-assisted privacy-edited 
 Build, strict TypeScript, lint, and whitespace checks passed. Production-preview Chromium checks at 1440, 768, 375, and 320 pixels confirmed seven shipping image loads and matching intrinsic dimensions, zero placeholders, direct-route refresh, no horizontal overflow, four-image arrow navigation and wraparound, Tab/Shift+Tab containment, Escape dismissal and focus restoration. Eight page/dialog WCAG A/AA scans returned zero violations. Mobile gallery/dialog screenshots were visually reviewed. Existing AR Aging, Daily Shipping and VOC/HAP viewers and Home/Projects passed regression checks. No browser errors or failed image requests.
 
 The GitHub deployment API remains inaccessible from this environment (HTTP CONNECT 403), so deployment must be run through the existing manual Pages workflow.
+
+## Formulary & Inventory Hub — November 17, 2026
+
+- Production build / TypeScript and ESLint passed; whitespace checks passed. No dependencies, CSP, workflow, or GitHub settings changes.
+- Reviewed all four supplied images visually and with OCR. Three supplied redacted navigation/task views contain no visible business records or formula contents, and no embedded metadata. Branding is concealed; generic dates and version labels remain visible. Synthetic reorder report is clearly marked fictional and not a production export. Copies and built assets preserve reviewed bytes and aspect ratios.
+- Chromium production-preview checks at widths 1440, 768, 375, and 320 passed: route refresh, Home/Projects six-card integration and links, four image loads/intrinsic dimensions, no horizontal overflow, section focus with reduced motion, all four single-image viewer flows, Tab/Shift+Tab containment, Escape, and focus restoration. Eight WCAG A/AA page/dialog scans found zero violations. Automated checks do not replace human screen-reader review.
+- Visually reviewed desktop/mobile hero and card artwork; replaced a font-dependent arrow glyph in the hero with the existing SVG icon to avoid a missing-glyph box.
+- Existing shipping, VOC/HAP, daily shipping, and AR aging viewers and representative unrelated pages passed regression checks. No browser errors or failed requests. All five existing project entries remain intact; this checkout contains no Production & Formula Dashboard entry.
+- No separate test script or unit-test suite is configured. Source-package differences were clarified with the owner; their message and included CASE_STUDY.md were approved as the specification.
+- No commit, push, deployment, or publication performed.

@@ -99,6 +99,31 @@ export const arAgingProject: Project = {
   confirmation:
     "Exact aging rules, credit handling, data validation evidence, historical reconstruction, database engine, and Excel library remain unconfirmed. No measured collection or financial improvement is claimed.",
 };
+export const formularyProject: Project = {
+  slug: "formulary-inventory-hub",
+  number: "06",
+  category: "ENTERPRISE APPLICATION DEVELOPMENT",
+  title: "Formulary & Inventory Hub",
+  icon: "formulary",
+  status: "Fully deployed in production",
+  summary:
+    "Modernizing backend-only formula entry with a dedicated production application for formula and inventory workflows.",
+  stack: ["C#", ".NET 8", "SQL Server"],
+  problem:
+    "Formula entry previously relied on backend-only work. A dedicated application was needed to bring formula maintenance and related inventory workflows into a user-facing interface.",
+  responsibilities:
+    "Jason Lewis created the application to replace backend-only formula entry.",
+  approach:
+    "A central hub separates Formulas, Inventory, and Check Inventory entry points. Formula Manager and Inventory Manager organize creation and maintenance tasks.",
+  architecture:
+    "A C# and .NET 8 desktop application connected to SQL Server. The workflow overview is conceptual; no specific UI framework, ERP integration, or deployment method is asserted.",
+  challenges:
+    "Engineering considerations include clear task entry points, formula and item-group relationships, and the distinction between inventory master and warehouse-specific records.",
+  outcome:
+    "The application is fully deployed and operating in production, replacing backend-only formula entry with a dedicated interface for formula and inventory workflows.",
+  confirmation:
+    "Detailed inventory lookup screens, integration specifics, deployment methods, business rules, and measurable outcomes have not been supplied. The reorder report illustration uses entirely fictional data.",
+};
 export const projects: readonly Project[] = [
   shippingProject,
   reportingProject,
@@ -128,6 +153,7 @@ export const projects: readonly Project[] = [
     confirmation:
       "Confirm representative public examples, individual responsibilities, and nonconfidential outcomes.",
   },
+  formularyProject,
 ];
 export const technologies = [
   "C#",
