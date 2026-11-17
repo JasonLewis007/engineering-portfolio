@@ -6,6 +6,7 @@ const icons = {
   shipping: Truck,
   reporting: FileChartColumn,
   "daily-reporting": FileChartColumn,
+  "ar-aging": FileChartColumn,
   manufacturing: Factory,
 };
 export function ProjectCard({ project }: { project: Project }) {
@@ -26,7 +27,9 @@ export function ProjectCard({ project }: { project: Project }) {
               ? "LEGACY → MODERN"
               : project.icon === "daily-reporting"
                 ? "SHIPPING / BUDGET"
-                : "SYSTEMS IN SYNC"}
+                : project.icon === "ar-aging"
+                  ? "RECEIVABLES / AGING"
+                  : "SYSTEMS IN SYNC"}
         </span>
       </div>
       <div className="project-body">

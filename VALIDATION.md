@@ -121,3 +121,13 @@ No unit-test suite or `npm test` script is configured. Browser checks used the e
 Replaced the fifth, heavily masked PDF view with a locally rendered report illustration containing entirely fictional names, dates, and values. Verified row and aggregate totals and the sales/budget bar proportions; reviewed the final image visually. Both the image and portfolio caption disclose its fictional origin and sample-only potential calculation. The four application workflow renders retain their privacy-edit disclosure.
 
 Production build and ESLint passed. Repeated browser checks passed at 1440, 768, 375, and 320 pixels, including five image loads with matching dimensions, dialog keyboard behavior, direct-route refresh, Home/Projects integration, existing case-study viewers, and eight page/dialog accessibility scans with zero violations. No commit, push, or publication performed.
+
+## A/R Aging Report — November 17, 2026
+
+- Production build, TypeScript, ESLint, and whitespace checks passed. No application dependencies or CSP changes.
+- Two application renders visually reviewed and OCR checked: customer names, records, financial figures, IDs, full dates, and counts concealed; debug overlays removed. Public page discloses AI-assisted edits and possible layout/typography differences. Original screenshots were not placed in public assets.
+- PDF-style and Excel-style samples generated from fictional data only, with matching rows and $10,000 total. Sample due dates agree with disclosed non-overlapping example buckets. Image and caption both disclose fictional data, recreated appearance, and illustrative rules.
+- Chromium production-preview checks at 1440, 768, 375, and 320 pixels passed: direct route and refresh, Home/Projects five-card navigation, four image loads and dimensions, reduced-motion section focus, no horizontal overflow.
+- Both gallery viewers passed arrow-key movement and wraparound, Tab/Shift+Tab containment, Escape, and focus restoration. Twelve automated page/dialog WCAG A/AA scans found zero violations; this does not replace human screen-reader review.
+- Existing daily shipping, VOC/HAP, and flagship shipping viewers, plus About, Experience, Skills, Contact, and manufacturing routes passed focused regressions. No browser errors or failed HTTP responses.
+- No dedicated unit-test suite exists. Deployment/publication remains manual and was not requested.

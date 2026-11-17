@@ -135,6 +135,15 @@ The daily shareholder-reporting case study is at `/#/projects/daily-shipping-rep
 
 The shared project list now contains four case studies. Shipping remains the flagship; the desktop gallery uses two columns for the four-card set. Potential is described as shipped-versus-ordered activity that can change daily, without inventing a formula or measured improvement.
 
+## A/R aging reporting
+
+The A/R Aging case study is at `/#/projects/ar-aging-report`. Shared Home and Projects data now includes five projects, with shipping retained as the flagship. It describes the confirmed receivables workflow, legacy reporting issues, selection criteria, historical reporting, QuestPDF and Excel output.
+
+- `src/pages/ArAgingCaseStudy.tsx` and `src/data/arAgingCaseStudy.ts`: dedicated page and typed content.
+- `public/images/ar-aging/`: two reviewed AI-assisted privacy-edited application renders and two fictional report illustrations. Visible disclosures distinguish edited application views from synthetic PDF-style and Excel-style samples.
+- `scripts/generate-ar-aging-samples.mjs`: reproducible fictional report images, using Playwright/Chromium as a separate authoring tool, without adding application dependencies.
+- `docs/ar-aging-case-study.md`: implementation handoff, image review, sample assumptions, and remaining factual questions.
+
 ## Validation
 
 Production build, strict TypeScript checking, ESLint, dependency audits, and local browser checks are described in `VALIDATION.md`. Automated checks do not replace final keyboard/screen-reader review or owner confirmation of professional content. See `SECURITY.md` for the security model and GitHub Pages limitations.
