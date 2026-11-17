@@ -19,6 +19,7 @@ import { ProjectCard } from "../components/ProjectCard";
 import { CaseStudyLayout } from "../components/CaseStudyLayout";
 import { projects } from "../data/projects";
 import { contact } from "../data/contact";
+import portraitUrl from "../assets/jason-lewis.jpg";
 function PageHeading({
   eyebrow,
   title,
@@ -72,9 +73,14 @@ export function About() {
           </p>
         </div>
         <aside className="profile-panel">
-          <span className="profile-monogram" aria-hidden="true">
-            JL<span>.</span>
-          </span>
+          <img
+            className="profile-portrait"
+            src={portraitUrl}
+            alt="Jason Lewis"
+            width={400}
+            height={400}
+            decoding="async"
+          />
           <h2>Jason Lewis</h2>
           <p>Software Engineer</p>
           <p className="location">

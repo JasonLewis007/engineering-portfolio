@@ -30,6 +30,7 @@ Preview serves the production artifact at `http://localhost:4173/engineering-por
 - `src/components/`: header, accessible mobile disclosure navigation, footer, section heading, project card, badges, calls to action, conceptual engineering illustration, and case-study layout.
 - `src/data/projects.ts`: the single typed source for project summaries, technologies, case-study sections, and confirmation notes.
 - `src/types/project.ts`: project contract.
+- `src/assets/jason-lewis.jpg`: owner-supplied portrait, bundled locally with no third-party image requests.
 - `src/pages/`: homepage and all primary pages, project detail routes, and 404 handling.
 - `src/styles/`: design tokens, reusable styles, responsive rules, and reduced-motion overrides.
 - `public/favicon.svg`: original local monogram favicon.

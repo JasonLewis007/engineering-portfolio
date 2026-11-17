@@ -800,24 +800,14 @@ svg {
   padding: 32px;
   height: fit-content;
 }
-.profile-monogram {
-  display: grid;
-  place-content: center;
-  width: 72px;
-  height: 72px;
-  background: #1b3151;
+.profile-portrait {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  aspect-ratio: 1;
   border: 1px solid #3a5579;
-  border-radius: 16px;
-  font-size: 30px;
-  font-weight: 600;
-  position: relative;
-  letter-spacing: -0.1em;
-}
-.profile-monogram > span {
-  position: absolute;
-  color: #80b0ff;
-  bottom: 14px;
-  right: 12px;
+  border-radius: 12px;
 }
 .profile-panel h2 {
   font-size: 25px;

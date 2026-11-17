@@ -39,4 +39,11 @@ The GitHub Actions workflow, GitHub Pages settings, production HTTPS behavior, h
 
 ## Contact details update
 
-Owner-supplied business email and LinkedIn were added to the contact page, with LinkedIn links also on About and in the footer. `npm run build` and `npm run lint` passed. Browser checks verified the exact `mailto:` and HTTPS LinkedIn destinations, new-tab link protections, no horizontal overflow, and no browser errors. Four axe scans (About and Contact at 320 and 1440 pixels) reported zero WCAG 2/2.1 A/AA violations. No dependencies changed. The portrait remains pending because its inline chat image was not available as a downloadable workspace file.
+Owner-supplied business email and LinkedIn were added to the contact page, with LinkedIn links also on About and in the footer. `npm run build` and `npm run lint` passed. Browser checks verified the exact `mailto:` and HTTPS LinkedIn destinations, new-tab link protections, no horizontal overflow, and no browser errors. Four axe scans (About and Contact at 320 and 1440 pixels) reported zero WCAG 2/2.1 A/AA violations. No dependencies changed. The portrait was not part of this contact update.
+
+
+## Portrait update
+
+Added the owner-supplied 400 × 400 JPEG to the About profile panel, preserving the original image bytes. The file is approximately 23 KB and contains no EXIF fields. Vite bundles it locally with a hashed asset URL compatible with the repository base path. Explicit dimensions reserve layout space; responsive sizing preserves its square proportions and alt text identifies Jason Lewis.
+
+`npm run build` and `npm run lint` passed. Production browser checks verified successful image decoding at its original dimensions, the correct base-prefixed asset URL, no horizontal overflow, and no console/CSP errors at 1440 and 320 pixels. Both About-page axe scans reported zero WCAG 2/2.1 A/AA violations. Desktop and mobile screenshots were visually reviewed. No dependency or deployment changes were made.
