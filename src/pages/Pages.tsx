@@ -27,7 +27,7 @@ import { projects } from "../data/projects";
 import { contact } from "../data/contact";
 import { experienceEntries, skillCategories } from "../data/professional";
 import portraitUrl from "../assets/jason-lewis.jpg";
-import resumeUrl from "../assets/jason-lewis-resume.pdf?url";
+const resumeUrl = `${import.meta.env.BASE_URL}Jason_Lewis_Modern_Engineering_Resume.pdf`;
 function PageHeading({
   eyebrow,
   title,
@@ -296,13 +296,24 @@ export function Contact() {
             <div>
               <h2>Résumé</h2>
               <p>
-                My experience, technical expertise, and education in a two-page
-                PDF.
+                My experience, technical expertise, and education in a PDF.
+              </p>
+              <p>
+                <a
+                  className="text-link"
+                  href={resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open résumé (PDF)
+                  <ArrowUpRight size={16} aria-hidden="true" />
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
               </p>
               <a
                 className="text-link"
                 href={resumeUrl}
-                download="Jason_Lewis_Resume.pdf"
+                download="Jason_Lewis_Modern_Engineering_Resume.pdf"
               >
                 Download résumé (PDF) <Download size={16} aria-hidden="true" />
               </a>

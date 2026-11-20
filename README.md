@@ -74,7 +74,7 @@ The build job has read-only repository access and does not retain checkout crede
 
 Skills and engineering role descriptions are based on the owner-supplied `Jason_Lewis_Resume_10_9_26.docx`, with HarperLove listed as Software Engineer / IT Specialist (2023–Present) and Full Stack Solutions LLC as Full Stack Developer (2022–2023).
 
-The owner-supplied public résumé is bundled in `src/assets/jason-lewis-resume.pdf` and linked for download from Contact. Replace that file to update the download, then rebuild. The PDF includes the phone number supplied in the résumé. Business email and LinkedIn are active contact links.
+The owner-supplied public résumé is `public/Jason_Lewis_Modern_Engineering_Resume.pdf`, with separate open and download links on Contact. Both use Vite’s `import.meta.env.BASE_URL`, supporting the configured GitHub Pages subpath or a root deployment. Replace that public PDF to update the résumé, then rebuild. Business email and LinkedIn are active contact links.
 
 Remaining confirmations:
 
