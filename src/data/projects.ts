@@ -1,4 +1,3 @@
-import { novaCover } from "./novaCaseStudy";
 import type { Project } from "../types/project";
 export const shippingProject: Project = {
   slug: "enterprise-shipping-management-suite",
@@ -249,7 +248,6 @@ export const novaProject: Project = {
   status: "Developed and deployed",
   role: "Solo developer and deployment owner",
   sourceUrl: "https://github.com/JasonLewis007/Calculator",
-  cover: novaCover,
   summary:
     "I developed and deployed NOVA, a voice-enabled desktop calculator and unit converter designed for blind and low-vision learners. It offers spoken guidance, keyboard navigation, and adjustable display and speech settings.",
   stack: [

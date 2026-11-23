@@ -196,11 +196,11 @@ The private application repository is not linked. Screenshots demonstrate interf
 
 ## NOVA | Spoken Math Assistant
 
-Project 10 is appended after the existing nine projects, with a dedicated gallery at `/#/projects/nova-spoken-math-assistant`. The existing ProjectCard is reused with a NOVA-only dark calculator cover, the exact requested role/description/technology tags, and a **View on GitHub** link. Its title opens the detail gallery. Existing cards, navigation and résumé links are preserved.
+Project 10 is appended after the existing nine projects, with a dedicated gallery at `/#/projects/nova-spoken-math-assistant`. The existing ProjectCard is reused with the same illustrated panel and **Explore case study** link as the other cards. Role and the **View on GitHub** link remain on its detail page. Existing cards, navigation and résumé links are preserved.
 
 - `src/pages/NovaCaseStudy.tsx` and `src/data/novaCaseStudy.ts`: kit-supported content and exact supplied alt text.
-- `public/images/nova/`: dark cover and Home/Calculator/Converter/Settings gallery images.
-- `src/styles/nova-case-study.css`: scoped cover sizing and role text, without changing existing cards.
+- `public/images/nova/`: Home/Calculator/Converter/Settings gallery images; the earlier dark cover asset is retained but no longer displayed on the card.
+- `src/styles/formulary-case-study.css`: NOVA shares the existing illustrated card panel styling.
 - `docs/nova-case-study.md`: kit reference, asset review, repository handling and accuracy boundaries.
 
 Keyboard calculation/conversion work offline; speech recognition uses Google's online recognizer. NOVA is designed for blind and low-vision learners without asserting formal accessibility compliance or universal screen-reader support. Calculator's `portfolio-kit` branch was cloned separately and left unchanged.

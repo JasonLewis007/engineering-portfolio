@@ -204,3 +204,9 @@ Exact ERP transport, .NET version, UI framework, transaction safeguards, and adj
 - All nine prior project viewers, legacy PO alias and résumé open/download passed regressions. Root hosting and Pages image paths loaded correctly. No browser errors or failed requests.
 - Offline keyboard calculation/conversion and online Google speech recognition are clearly separated. No formal accessibility compliance, universal screen-reader support, offline recognition or unverified metric claimed.
 - No new dependencies, secrets, CSP weakening, navigation changes, résumé changes, commit, push, deployment or publication.
+
+### NOVA card consistency correction
+
+Owner superseded the screenshot-cover and card-level GitHub-footer requirements: NOVA now uses the shared three-tile illustrated panel and Explore case study link. Role and View on GitHub remain on the dedicated detail page; four gallery slides are unchanged. Removed unused cover fields/export and scoped cover CSS, retaining the earlier dark image asset without displaying it. The other nine cards keep their existing content and markup.
+
+Lint, production build and whitespace checks passed. Browser checks at 1440, 768, 375 and 320 pixels confirmed Home/Projects ten-card listings, matching computed artwork/panel/body/badge/footer styles with Formulary, no screenshot in NOVA's card header, working case-study CTA, no horizontal overflow, and preserved detail role/GitHub/gallery. Desktop card visually reviewed. No commit, push or deployment performed.

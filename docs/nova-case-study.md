@@ -8,16 +8,11 @@ The requested GitHub URL was verified through successful clone and read-only rem
 
 ## Integration
 
-Exactly one new card, project 10, appended after the original nine projects. No existing project is removed, reordered, or changed. The card retains the existing component, body markup, typography, badges, spacing, borders, hover, and responsive layout. NOVA alone uses a supplied photo-style cover instead of an illustrated panel, as explicitly requested. The original 190-pixel desktop/mobile header and tablet side-panel layout are preserved; the full dark calculator screenshot is contained without cropping. Its exact kit alt text is exposed to accessibility APIs, rather than hidden with decorative artwork.
+Exactly one new card, project 10, appended after the original nine projects. Following the owner's subsequent styling correction, NOVA now shares the exact Formulary/Barter illustrated panel, body markup, typography, badges, spacing, borders, hover, responsive layout and Explore case study footer. Calculator, spoken-audio and conversion icons replace the prior screenshot cover. The role line stays on the detail page rather than creating an extra card row.
 
-- Shared optional project fields: cover metadata, role, and source URL. Existing projects do not use these fields and their output remains unchanged.
-- `src/data/projects.ts`: exact requested title, description, role, four technology tags, repository URL, and project 10 placement.
-- `src/data/novaCaseStudy.ts`: exact IMAGES.md alt text, dark cover, four gallery records, and kit-supported capabilities.
-- `src/pages/NovaCaseStudy.tsx`: existing case-study layout/style patterns and screenshot viewer; role, learning workflow, technology, connectivity and support boundaries.
-- `src/styles/nova-case-study.css`: NOVA-scoped cover/role rules only.
-- `ScreenshotGallery`: adds the existing local path convention's `nova` directory; preserves validation and controls.
+`src/data/projects.ts` retains the exact requested title, description, role, tags and repository URL. `src/data/novaCaseStudy.ts` supplies the four gallery images with exact kit alt text. `src/pages/NovaCaseStudy.tsx` preserves the role, technical content, gallery and GitHub link. Shared Formulary CSS includes NOVA in its existing background selector; the separate cover CSS and unused cover fields have been removed.
 
-Card title opens the dedicated gallery page at `/#/projects/nova-spoken-math-assistant`; the primary card footer uses the requested `View on GitHub` label and Calculator URL. The detail page also exposes that same source link. No live application web URL is invented.
+Card title and footer open `/#/projects/nova-spoken-math-assistant`. The detail page retains View on GitHub. Existing nine project entries and résumé/navigation behavior remain unchanged.
 
 ## Technical accuracy
 
@@ -31,7 +26,7 @@ The kit references unittest application test areas; this task validates only por
 
 Visually reviewed all five supplied captures. Only generic calculation examples, settings, and instructional text are shown; no visible private user records, tokens, emails, internal URLs, or secrets found. Images are unchanged, preserve intrinsic 960 × 755 dimensions and aspect ratios, and use the exact corresponding IMAGES.md alt text.
 
-Dark cover: `nova-calculator-dark.png`. Four gallery images in order: Home (`nova-home.png`), Calculator (`nova-calculator.png`), Converter (`nova-converter.png`), Settings (`nova-settings.png`). All live in `public/images/nova/`. No duplicate project card or dark-cover gallery slide is added.
+The previously used dark cover asset `nova-calculator-dark.png` remains available but is not displayed on the card. Four gallery images in order: Home (`nova-home.png`), Calculator (`nova-calculator.png`), Converter (`nova-converter.png`), Settings (`nova-settings.png`). All live in `public/images/nova/`. No duplicate project card or dark-cover gallery slide is added.
 
 ## Preview
 

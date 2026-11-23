@@ -4,7 +4,6 @@ export interface Project {
   status?: string;
   role?: string;
   sourceUrl?: string;
-  cover?: { filename: string; alt: string; width: number; height: number };
   number: string;
   category: string;
   title: string;

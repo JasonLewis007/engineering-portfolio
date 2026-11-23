@@ -1,10 +1,4 @@
 import type { CaseStudyScreenshot } from "../types/caseStudy";
-export const novaCover = {
-  filename: "nova-calculator-dark.png",
-  alt: "NOVA dark-theme calculator showing a keypad and the result of two plus three.",
-  width: 960,
-  height: 755,
-};
 export const novaScreenshots: readonly CaseStudyScreenshot[] = [
   {
     id: "home",
