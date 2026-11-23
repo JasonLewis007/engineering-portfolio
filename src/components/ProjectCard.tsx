@@ -8,6 +8,8 @@ import {
   House,
   CalendarDays,
   UsersRound,
+  Monitor,
+  History,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { Project } from "../types/project";
@@ -20,6 +22,7 @@ const icons = {
   manufacturing: Factory,
   formulary: Grid3X3,
   "heavenly-homes": House,
+  itams: Monitor,
 };
 export function ProjectCard({ project }: { project: Project }) {
   const Icon = icons[project.icon];
@@ -29,20 +32,32 @@ export function ProjectCard({ project }: { project: Project }) {
     >
       <div className="project-art" aria-hidden="true">
         <span className="project-number">PROJECT / {project.number}</span>
-        {project.icon === "formulary" || project.icon === "heavenly-homes" ? (
+        {project.icon === "formulary" ||
+        project.icon === "heavenly-homes" ||
+        project.icon === "itams" ? (
           <div className="formulary-card-preview">
             <span>
-              {project.icon === "heavenly-homes" ? <House size={34} /> : "ƒ(x)"}
+              {project.icon === "itams" ? (
+                <Monitor size={34} />
+              ) : project.icon === "heavenly-homes" ? (
+                <House size={34} />
+              ) : (
+                "ƒ(x)"
+              )}
             </span>
             <span>
-              {project.icon === "heavenly-homes" ? (
+              {project.icon === "itams" ? (
+                <UsersRound size={34} />
+              ) : project.icon === "heavenly-homes" ? (
                 <CalendarDays size={34} />
               ) : (
                 <Grid3X3 size={34} />
               )}
             </span>
             <span>
-              {project.icon === "heavenly-homes" ? (
+              {project.icon === "itams" ? (
+                <History size={34} />
+              ) : project.icon === "heavenly-homes" ? (
                 <UsersRound size={34} />
               ) : (
                 <TrendingUp size={34} />
@@ -67,7 +82,9 @@ export function ProjectCard({ project }: { project: Project }) {
                     ? "FORMULAS / INVENTORY / VISIBILITY"
                     : project.icon === "heavenly-homes"
                       ? "STAYS / GATHERINGS / COMMUNITY"
-                      : "SYSTEMS IN SYNC"}
+                      : project.icon === "itams"
+                        ? "ASSETS / ASSIGNMENTS / HISTORY"
+                        : "SYSTEMS IN SYNC"}
         </span>
       </div>
       <div className="project-body">

@@ -14,7 +14,8 @@ export interface Project {
     | "ar-aging"
     | "manufacturing"
     | "formulary"
-    | "heavenly-homes";
+    | "heavenly-homes"
+    | "itams";
   problem: string;
   responsibilities: string;
   approach: string;

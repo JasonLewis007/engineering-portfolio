@@ -182,6 +182,38 @@ export const purchaseOrderProject: Project = {
   confirmation:
     "The .NET version, UI framework, ERP transfer mechanism, transaction and validation behavior, financial adjustment details, and measured improvements have not been supplied. The screenshot shows the empty application layout, not a completed transaction.",
 };
+export const itamsProject: Project = {
+  slug: "itams",
+  number: "08",
+  category: "ENTERPRISE APPLICATION / IT OPERATIONS",
+  title: "ITAMS — IT Asset Management System",
+  icon: "itams",
+  status: "Deployed in Production",
+  summary:
+    "Designed and built an IT asset management application to track company equipment, assignments, transfers, returns, audit history, and management reporting.",
+  stack: [
+    "C#",
+    ".NET",
+    "WPF",
+    "SQL Server",
+    "Microsoft Entra ID",
+    "Microsoft Intune",
+  ],
+  problem:
+    "Technology assets distributed across departments, internal locations, and field assignments need centralized visibility and clear accountability for who holds equipment and where it is located.",
+  responsibilities:
+    "Jason Lewis designed and built ITAMS. The application is deployed in production; Microsoft integration behavior is confirmed by the owner without claiming sole authorship of each integration.",
+  approach:
+    "A WPF application brings asset inventory, employee and location records, assignment, return and transfer workflows, historical accountability, dashboards, and reporting into one system.",
+  architecture:
+    "C# and .NET with WPF and SQL Server, integrated with Microsoft Entra ID and Microsoft Intune. The existing integrations automatically retrieve employee and managed-device information. Exact .NET version, transport/API, authentication method, sync cadence, and mapping are not specified.",
+  challenges:
+    "Engineering considerations include employee and location assignment context, preserved movement history, inventory visibility, and using current employee and managed-device information from existing Microsoft integrations.",
+  outcome:
+    "A production-deployed system centralizes asset visibility, assignment accountability, movement history, and management reporting across in-house and field assets. No measured savings or ROI is claimed.",
+  confirmation:
+    "Integration mechanisms, data mapping, synchronization behavior, database schema, report libraries, and future enhancements require evidence before further technical claims. Screenshots conceal tabular records but retain counts and general location labels for owner review.",
+};
 export const projects: readonly Project[] = [
   shippingProject,
   heavenlyHomesProject,
@@ -190,6 +222,7 @@ export const projects: readonly Project[] = [
   arAgingProject,
   purchaseOrderProject,
   formularyProject,
+  itamsProject,
 ];
 export const technologies = [
   "C#",

@@ -174,6 +174,16 @@ The dedicated production case study at `/#/projects/purchase-order-receiving-erp
 
 The stack is C#, .NET, SQL Server, and ERP integration. Neither a specific .NET version nor an API/file transport is inferred. Owner-reported receiving/receivables scope is distinguished from what the empty application screenshot directly shows.
 
+## ITAMS — IT Asset Management System
+
+Production-deployed enterprise IT operations case study at `/#/projects/itams`, with the same Formulary project-card styling and device/people/history illustration. Project 08 is added without replacing any existing entry. Confirmed stack: C#, .NET, WPF, SQL Server, Microsoft Entra ID, Microsoft Intune. Existing Entra/Intune integrations automatically retrieve employee and managed-device information; unverified mechanisms and sync details are not assumed.
+
+- `src/pages/ItamsCaseStudy.tsx` and `src/data/itamsCaseStudy.ts`: role, workflows, current integrations, architecture, outcomes and six-view walkthrough.
+- `public/images/itams/`: all six supplied sanitized screenshots in order; table records concealed, with aggregate counts/general locations and some employer wording retained for review.
+- `docs/itams-case-study.md`: source facts, privacy findings, asset hashes and technical limitations.
+
+No invented metrics, exact .NET version, API endpoints, authentication method, sync cadence, bidirectional behavior, report libraries, or future-enhancement completion claims. Review retained screenshot details before public release.
+
 ## Validation
 
 Production build, strict TypeScript checking, ESLint, dependency audits, and local browser checks are described in `VALIDATION.md`. Automated checks do not replace final keyboard/screen-reader review or owner confirmation of professional content. See `SECURITY.md` for the security model and GitHub Pages limitations.
