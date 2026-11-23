@@ -1,3 +1,4 @@
+import { novaCover } from "./novaCaseStudy";
 import type { Project } from "../types/project";
 export const shippingProject: Project = {
   slug: "enterprise-shipping-management-suite",
@@ -239,6 +240,38 @@ export const barterBetterProject: Project = {
   confirmation:
     "No application source or verified functional test evidence was supplied. Do not infer database engine, API framework, authentication provider implementation, production deployment, or completed integrations. The application repository is private and is not linked.",
 };
+export const novaProject: Project = {
+  slug: "nova-spoken-math-assistant",
+  number: "10",
+  category: "DESKTOP APPLICATION DEVELOPMENT",
+  title: "NOVA | Spoken Math Assistant",
+  icon: "nova",
+  status: "Developed and deployed",
+  role: "Solo developer and deployment owner",
+  sourceUrl: "https://github.com/JasonLewis007/Calculator",
+  cover: novaCover,
+  summary:
+    "I developed and deployed NOVA, a voice-enabled desktop calculator and unit converter designed for blind and low-vision learners. It offers spoken guidance, keyboard navigation, and adjustable display and speech settings.",
+  stack: [
+    "Python 3.12",
+    "Tkinter / CustomTkinter",
+    "Windows SAPI",
+    "SpeechRecognition",
+  ],
+  problem:
+    "Blind and low-vision learners need calculation and conversion workflows designed around spoken guidance, keyboard access, and adjustable presentation.",
+  responsibilities: "Solo developer and deployment owner.",
+  approach:
+    "Always-on narration, a spoken first-run guide, keyboard navigation, a limited arithmetic grammar, and a converter with eight categories support the learning workflow.",
+  architecture:
+    "Python 3.12 application with Tkinter, ttk, and CustomTkinter, native Windows SAPI speech via pywin32, and SpeechRecognition with PyAudio for microphone commands through Google's online recognizer.",
+  challenges:
+    "Coordinate spoken feedback, keyboard interaction, adjustable display and speech preferences, and background audio work while distinguishing offline calculation from online recognition.",
+  outcome:
+    "NOVA is developed and deployed as a Python desktop project distributed through GitHub. Keyboard calculation and conversion work offline; speech recognition uses an online service.",
+  confirmation:
+    "The application is designed to support blind and low-vision learners. Formal accessibility compliance, universal screen-reader support, and offline voice recognition are outside the verified claims.",
+};
 export const projects: readonly Project[] = [
   shippingProject,
   heavenlyHomesProject,
@@ -249,6 +282,7 @@ export const projects: readonly Project[] = [
   formularyProject,
   itamsProject,
   barterBetterProject,
+  novaProject,
 ];
 export const technologies = [
   "C#",

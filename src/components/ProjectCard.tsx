@@ -13,10 +13,12 @@ import {
   ArrowLeftRight,
   PackageOpen,
   Handshake,
+  Calculator,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { Project } from "../types/project";
-import { TechBadge } from "./Shared";
+import "../styles/nova-case-study.css";
+import { ExternalLink, TechBadge } from "./Shared";
 const icons = {
   shipping: Truck,
   reporting: FileChartColumn,
@@ -27,6 +29,7 @@ const icons = {
   "heavenly-homes": House,
   itams: Monitor,
   "barter-better": ArrowLeftRight,
+  nova: Calculator,
 };
 export function ProjectCard({ project }: { project: Project }) {
   const Icon = icons[project.icon];
@@ -34,72 +37,88 @@ export function ProjectCard({ project }: { project: Project }) {
     <article
       className={`project-card project-${project.icon}${project.featured ? " project-featured" : ""}`}
     >
-      <div className="project-art" aria-hidden="true">
-        <span className="project-number">PROJECT / {project.number}</span>
-        {project.icon === "formulary" ||
-        project.icon === "heavenly-homes" ||
-        project.icon === "itams" ||
-        project.icon === "barter-better" ? (
-          <div className="formulary-card-preview">
-            <span>
-              {project.icon === "barter-better" ? (
-                <ArrowLeftRight size={34} />
-              ) : project.icon === "itams" ? (
-                <Monitor size={34} />
-              ) : project.icon === "heavenly-homes" ? (
-                <House size={34} />
-              ) : (
-                "ƒ(x)"
-              )}
-            </span>
-            <span>
-              {project.icon === "barter-better" ? (
-                <PackageOpen size={34} />
-              ) : project.icon === "itams" ? (
-                <UsersRound size={34} />
-              ) : project.icon === "heavenly-homes" ? (
-                <CalendarDays size={34} />
-              ) : (
-                <Grid3X3 size={34} />
-              )}
-            </span>
-            <span>
-              {project.icon === "barter-better" ? (
-                <Handshake size={34} />
-              ) : project.icon === "itams" ? (
-                <History size={34} />
-              ) : project.icon === "heavenly-homes" ? (
-                <UsersRound size={34} />
-              ) : (
-                <TrendingUp size={34} />
-              )}
+      {project.cover ? (
+        <div className="project-art nova-cover">
+          <span className="project-number">PROJECT / {project.number}</span>
+          <img
+            src={`${import.meta.env.BASE_URL}images/nova/${project.cover.filename}`}
+            alt={project.cover.alt}
+            width={project.cover.width}
+            height={project.cover.height}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      ) : (
+        <>
+          <div className="project-art" aria-hidden="true">
+            <span className="project-number">PROJECT / {project.number}</span>
+            {project.icon === "formulary" ||
+            project.icon === "heavenly-homes" ||
+            project.icon === "itams" ||
+            project.icon === "barter-better" ? (
+              <div className="formulary-card-preview">
+                <span>
+                  {project.icon === "barter-better" ? (
+                    <ArrowLeftRight size={34} />
+                  ) : project.icon === "itams" ? (
+                    <Monitor size={34} />
+                  ) : project.icon === "heavenly-homes" ? (
+                    <House size={34} />
+                  ) : (
+                    "ƒ(x)"
+                  )}
+                </span>
+                <span>
+                  {project.icon === "barter-better" ? (
+                    <PackageOpen size={34} />
+                  ) : project.icon === "itams" ? (
+                    <UsersRound size={34} />
+                  ) : project.icon === "heavenly-homes" ? (
+                    <CalendarDays size={34} />
+                  ) : (
+                    <Grid3X3 size={34} />
+                  )}
+                </span>
+                <span>
+                  {project.icon === "barter-better" ? (
+                    <Handshake size={34} />
+                  ) : project.icon === "itams" ? (
+                    <History size={34} />
+                  ) : project.icon === "heavenly-homes" ? (
+                    <UsersRound size={34} />
+                  ) : (
+                    <TrendingUp size={34} />
+                  )}
+                </span>
+              </div>
+            ) : (
+              <div className="art-orbit">
+                <Icon size={52} strokeWidth={1.1} />
+              </div>
+            )}
+            <span className="art-label">
+              {project.icon === "shipping"
+                ? "CONNECTED OPERATIONS"
+                : project.icon === "reporting"
+                  ? "LEGACY → MODERN"
+                  : project.icon === "daily-reporting"
+                    ? "SHIPPING / BUDGET"
+                    : project.icon === "ar-aging"
+                      ? "RECEIVABLES / AGING"
+                      : project.icon === "formulary"
+                        ? "FORMULAS / INVENTORY / VISIBILITY"
+                        : project.icon === "heavenly-homes"
+                          ? "STAYS / GATHERINGS / COMMUNITY"
+                          : project.icon === "itams"
+                            ? "ASSETS / ASSIGNMENTS / HISTORY"
+                            : project.icon === "barter-better"
+                              ? "ITEMS / SERVICES / COMMUNITY"
+                              : "SYSTEMS IN SYNC"}
             </span>
           </div>
-        ) : (
-          <div className="art-orbit">
-            <Icon size={52} strokeWidth={1.1} />
-          </div>
-        )}
-        <span className="art-label">
-          {project.icon === "shipping"
-            ? "CONNECTED OPERATIONS"
-            : project.icon === "reporting"
-              ? "LEGACY → MODERN"
-              : project.icon === "daily-reporting"
-                ? "SHIPPING / BUDGET"
-                : project.icon === "ar-aging"
-                  ? "RECEIVABLES / AGING"
-                  : project.icon === "formulary"
-                    ? "FORMULAS / INVENTORY / VISIBILITY"
-                    : project.icon === "heavenly-homes"
-                      ? "STAYS / GATHERINGS / COMMUNITY"
-                      : project.icon === "itams"
-                        ? "ASSETS / ASSIGNMENTS / HISTORY"
-                        : project.icon === "barter-better"
-                          ? "ITEMS / SERVICES / COMMUNITY"
-                          : "SYSTEMS IN SYNC"}
-        </span>
-      </div>
+        </>
+      )}
       <div className="project-body">
         <p className="eyebrow">
           {project.featured ? "FLAGSHIP / " : ""}
@@ -112,16 +131,31 @@ export function ProjectCard({ project }: { project: Project }) {
             <ArrowUpRight size={20} aria-hidden="true" />
           </Link>
         </h3>
+        {project.role && <p className="project-role">{project.role}</p>}
         <p>{project.summary}</p>
         <div className="badges">
           {project.stack.map((tech) => (
             <TechBadge key={tech}>{tech}</TechBadge>
           ))}
         </div>
-        <Link className="text-link case-link" to={`/projects/${project.slug}`}>
-          Explore case study <ArrowUpRight size={16} aria-hidden="true" />
-          <span className="sr-only">: {project.title}</span>
-        </Link>
+        {project.sourceUrl ? (
+          <ExternalLink
+            className="text-link case-link"
+            href={project.sourceUrl}
+          >
+            View on GitHub <ArrowUpRight size={16} aria-hidden="true" />
+          </ExternalLink>
+        ) : (
+          <>
+            <Link
+              className="text-link case-link"
+              to={`/projects/${project.slug}`}
+            >
+              Explore case study <ArrowUpRight size={16} aria-hidden="true" />
+              <span className="sr-only">: {project.title}</span>
+            </Link>{" "}
+          </>
+        )}
       </div>
     </article>
   );

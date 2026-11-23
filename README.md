@@ -194,6 +194,17 @@ Project 09 at `/#/projects/barter-better`: an in-development community trading m
 
 The private application repository is not linked. Screenshots demonstrate interfaces; working sign-in, uploads, geolocation, matching and persistence require verification.
 
+## NOVA | Spoken Math Assistant
+
+Project 10 is appended after the existing nine projects, with a dedicated gallery at `/#/projects/nova-spoken-math-assistant`. The existing ProjectCard is reused with a NOVA-only dark calculator cover, the exact requested role/description/technology tags, and a **View on GitHub** link. Its title opens the detail gallery. Existing cards, navigation and résumé links are preserved.
+
+- `src/pages/NovaCaseStudy.tsx` and `src/data/novaCaseStudy.ts`: kit-supported content and exact supplied alt text.
+- `public/images/nova/`: dark cover and Home/Calculator/Converter/Settings gallery images.
+- `src/styles/nova-case-study.css`: scoped cover sizing and role text, without changing existing cards.
+- `docs/nova-case-study.md`: kit reference, asset review, repository handling and accuracy boundaries.
+
+Keyboard calculation/conversion work offline; speech recognition uses Google's online recognizer. NOVA is designed for blind and low-vision learners without asserting formal accessibility compliance or universal screen-reader support. Calculator's `portfolio-kit` branch was cloned separately and left unchanged.
+
 ## Validation
 
 Production build, strict TypeScript checking, ESLint, dependency audits, and local browser checks are described in `VALIDATION.md`. Automated checks do not replace final keyboard/screen-reader review or owner confirmation of professional content. See `SECURITY.md` for the security model and GitHub Pages limitations.

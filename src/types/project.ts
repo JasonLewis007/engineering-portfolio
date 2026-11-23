@@ -2,6 +2,9 @@ export interface Project {
   slug: string;
   featured?: boolean;
   status?: string;
+  role?: string;
+  sourceUrl?: string;
+  cover?: { filename: string; alt: string; width: number; height: number };
   number: string;
   category: string;
   title: string;
@@ -16,7 +19,8 @@ export interface Project {
     | "formulary"
     | "heavenly-homes"
     | "itams"
-    | "barter-better";
+    | "barter-better"
+    | "nova";
   problem: string;
   responsibilities: string;
   approach: string;
