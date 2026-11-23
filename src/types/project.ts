@@ -15,7 +15,8 @@ export interface Project {
     | "manufacturing"
     | "formulary"
     | "heavenly-homes"
-    | "itams";
+    | "itams"
+    | "barter-better";
   problem: string;
   responsibilities: string;
   approach: string;

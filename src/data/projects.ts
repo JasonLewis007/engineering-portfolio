@@ -214,6 +214,31 @@ export const itamsProject: Project = {
   confirmation:
     "Integration mechanisms, data mapping, synchronization behavior, database schema, report libraries, and future enhancements require evidence before further technical claims. Screenshots conceal tabular records but retain counts and general location labels for owner review.",
 };
+export const barterBetterProject: Project = {
+  slug: "barter-better",
+  number: "09",
+  category: "FULL-STACK APPLICATION DEVELOPMENT",
+  title: "Barter Better — Community Trading Marketplace",
+  icon: "barter-better",
+  status: "In Development",
+  summary:
+    "Building a community trading marketplace designed to connect people exchanging items and services in public and community contexts.",
+  stack: ["React", "TypeScript", "C#/.NET", "REST APIs", "Supabase", "Vercel"],
+  problem:
+    "People need ways to connect around the items and services they can exchange. Barter Better explores a community-oriented marketplace for discovering those opportunities.",
+  responsibilities:
+    "Jason Lewis is Technical Co-Founder & Full-Stack Developer, building the product and its full-stack direction.",
+  approach:
+    "A branded onboarding interface introduces registration, profile name, optional photo, approximate location or ZIP, and item/service selection before the intended trading experience.",
+  architecture:
+    "The established owner-specified stack is React, TypeScript, C#/.NET, REST APIs, Supabase, and Vercel. The supplied package documents screens, not verified running services or completed integrations.",
+  challenges:
+    "Development themes include a coherent onboarding journey, optional profile steps, approximate-location context, and clear separation of item and service intent. Backend implementation details remain private and unverified here.",
+  outcome:
+    "Six supplied screenshots demonstrate the current onboarding presentation. The product remains in development; live account creation, provider sign-in, uploads, location services, matching, and backend persistence are not established by the screenshots.",
+  confirmation:
+    "No application source or verified functional test evidence was supplied. Do not infer database engine, API framework, authentication provider implementation, production deployment, or completed integrations. The application repository is private and is not linked.",
+};
 export const projects: readonly Project[] = [
   shippingProject,
   heavenlyHomesProject,
@@ -223,6 +248,7 @@ export const projects: readonly Project[] = [
   purchaseOrderProject,
   formularyProject,
   itamsProject,
+  barterBetterProject,
 ];
 export const technologies = [
   "C#",

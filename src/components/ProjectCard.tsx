@@ -10,6 +10,9 @@ import {
   UsersRound,
   Monitor,
   History,
+  ArrowLeftRight,
+  PackageOpen,
+  Handshake,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { Project } from "../types/project";
@@ -23,6 +26,7 @@ const icons = {
   formulary: Grid3X3,
   "heavenly-homes": House,
   itams: Monitor,
+  "barter-better": ArrowLeftRight,
 };
 export function ProjectCard({ project }: { project: Project }) {
   const Icon = icons[project.icon];
@@ -34,10 +38,13 @@ export function ProjectCard({ project }: { project: Project }) {
         <span className="project-number">PROJECT / {project.number}</span>
         {project.icon === "formulary" ||
         project.icon === "heavenly-homes" ||
-        project.icon === "itams" ? (
+        project.icon === "itams" ||
+        project.icon === "barter-better" ? (
           <div className="formulary-card-preview">
             <span>
-              {project.icon === "itams" ? (
+              {project.icon === "barter-better" ? (
+                <ArrowLeftRight size={34} />
+              ) : project.icon === "itams" ? (
                 <Monitor size={34} />
               ) : project.icon === "heavenly-homes" ? (
                 <House size={34} />
@@ -46,7 +53,9 @@ export function ProjectCard({ project }: { project: Project }) {
               )}
             </span>
             <span>
-              {project.icon === "itams" ? (
+              {project.icon === "barter-better" ? (
+                <PackageOpen size={34} />
+              ) : project.icon === "itams" ? (
                 <UsersRound size={34} />
               ) : project.icon === "heavenly-homes" ? (
                 <CalendarDays size={34} />
@@ -55,7 +64,9 @@ export function ProjectCard({ project }: { project: Project }) {
               )}
             </span>
             <span>
-              {project.icon === "itams" ? (
+              {project.icon === "barter-better" ? (
+                <Handshake size={34} />
+              ) : project.icon === "itams" ? (
                 <History size={34} />
               ) : project.icon === "heavenly-homes" ? (
                 <UsersRound size={34} />
@@ -84,7 +95,9 @@ export function ProjectCard({ project }: { project: Project }) {
                       ? "STAYS / GATHERINGS / COMMUNITY"
                       : project.icon === "itams"
                         ? "ASSETS / ASSIGNMENTS / HISTORY"
-                        : "SYSTEMS IN SYNC"}
+                        : project.icon === "barter-better"
+                          ? "ITEMS / SERVICES / COMMUNITY"
+                          : "SYSTEMS IN SYNC"}
         </span>
       </div>
       <div className="project-body">

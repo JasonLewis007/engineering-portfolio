@@ -184,6 +184,16 @@ Production-deployed enterprise IT operations case study at `/#/projects/itams`, 
 
 No invented metrics, exact .NET version, API endpoints, authentication method, sync cadence, bidirectional behavior, report libraries, or future-enhancement completion claims. Review retained screenshot details before public release.
 
+## Barter Better
+
+Project 09 at `/#/projects/barter-better`: an in-development community trading marketplace, with Jason Lewis as Technical Co-Founder & Full-Stack Developer. The exact existing Formulary card conventions are reused; all eight earlier projects remain intact. The established stack is React, TypeScript, C#/.NET, REST APIs, Supabase and Vercel, without unverified backend-completion or production claims.
+
+- `src/pages/BarterBetterCaseStudy.tsx` and `src/data/barterBetterCaseStudy.ts`: role, vision, evidence limits, architecture intent, next steps and six-step onboarding gallery.
+- `public/images/barter-better/`: reviewed supplied screenshots, unchanged and ordered 01–06.
+- `docs/barter-better-case-study.md`: source review, privacy checks, implementation scope and asset hashes.
+
+The private application repository is not linked. Screenshots demonstrate interfaces; working sign-in, uploads, geolocation, matching and persistence require verification.
+
 ## Validation
 
 Production build, strict TypeScript checking, ESLint, dependency audits, and local browser checks are described in `VALIDATION.md`. Automated checks do not replace final keyboard/screen-reader review or owner confirmation of professional content. See `SECURITY.md` for the security model and GitHub Pages limitations.

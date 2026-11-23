@@ -16,6 +16,7 @@ import {
   CallToAction,
   ExternalLink,
 } from "../components/Shared";
+import { BarterBetterCaseStudy } from "./BarterBetterCaseStudy";
 import { ItamsCaseStudy } from "./ItamsCaseStudy";
 import { PurchaseOrderCaseStudy } from "./PurchaseOrderCaseStudy";
 import { HeavenlyHomesCaseStudy } from "./HeavenlyHomesCaseStudy";
@@ -154,6 +155,8 @@ export function ProjectDetails() {
       (slug === "manufacturing-erp" ? "purchase-order-receiving-erp" : slug),
   );
   if (!project) return <NotFound />;
+  if (project.icon === "barter-better")
+    return <BarterBetterCaseStudy project={project} />;
   if (project.icon === "itams") return <ItamsCaseStudy project={project} />;
   if (project.slug === "purchase-order-receiving-erp")
     return <PurchaseOrderCaseStudy project={project} />;
