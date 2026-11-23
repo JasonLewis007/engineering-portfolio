@@ -5,6 +5,9 @@ import {
   Factory,
   Grid3X3,
   TrendingUp,
+  House,
+  CalendarDays,
+  UsersRound,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { Project } from "../types/project";
@@ -16,6 +19,7 @@ const icons = {
   "ar-aging": FileChartColumn,
   manufacturing: Factory,
   formulary: Grid3X3,
+  "heavenly-homes": House,
 };
 export function ProjectCard({ project }: { project: Project }) {
   const Icon = icons[project.icon];
@@ -25,14 +29,24 @@ export function ProjectCard({ project }: { project: Project }) {
     >
       <div className="project-art" aria-hidden="true">
         <span className="project-number">PROJECT / {project.number}</span>
-        {project.icon === "formulary" ? (
+        {project.icon === "formulary" || project.icon === "heavenly-homes" ? (
           <div className="formulary-card-preview">
-            <span>ƒ(x)</span>
             <span>
-              <Grid3X3 size={34} />
+              {project.icon === "heavenly-homes" ? <House size={34} /> : "ƒ(x)"}
             </span>
             <span>
-              <TrendingUp size={34} />
+              {project.icon === "heavenly-homes" ? (
+                <CalendarDays size={34} />
+              ) : (
+                <Grid3X3 size={34} />
+              )}
+            </span>
+            <span>
+              {project.icon === "heavenly-homes" ? (
+                <UsersRound size={34} />
+              ) : (
+                <TrendingUp size={34} />
+              )}
             </span>
           </div>
         ) : (
@@ -51,7 +65,9 @@ export function ProjectCard({ project }: { project: Project }) {
                   ? "RECEIVABLES / AGING"
                   : project.icon === "formulary"
                     ? "FORMULAS / INVENTORY / VISIBILITY"
-                    : "SYSTEMS IN SYNC"}
+                    : project.icon === "heavenly-homes"
+                      ? "STAYS / GATHERINGS / COMMUNITY"
+                      : "SYSTEMS IN SYNC"}
         </span>
       </div>
       <div className="project-body">

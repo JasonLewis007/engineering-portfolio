@@ -16,6 +16,7 @@ import {
   CallToAction,
   ExternalLink,
 } from "../components/Shared";
+import { HeavenlyHomesCaseStudy } from "./HeavenlyHomesCaseStudy";
 import { FormularyCaseStudy } from "./FormularyCaseStudy";
 import { ArAgingCaseStudy } from "./ArAgingCaseStudy";
 import { DailyShippingCaseStudy } from "./DailyShippingCaseStudy";
@@ -147,6 +148,8 @@ export function ProjectDetails() {
   const { slug } = useParams();
   const project = projects.find((item) => item.slug === slug);
   if (!project) return <NotFound />;
+  if (project.icon === "heavenly-homes")
+    return <HeavenlyHomesCaseStudy project={project} />;
   if (project.icon === "formulary")
     return <FormularyCaseStudy project={project} />;
   if (project.icon === "ar-aging")
@@ -295,9 +298,7 @@ export function Contact() {
             <FileText size={21} aria-hidden="true" />
             <div>
               <h2>Résumé</h2>
-              <p>
-                My experience, technical expertise, and education in a PDF.
-              </p>
+              <p>My experience, technical expertise, and education in a PDF.</p>
               <p>
                 <a
                   className="text-link"

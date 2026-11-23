@@ -153,6 +153,17 @@ New case study at `/#/projects/formulary-inventory-hub`, separate from all five 
 - `public/images/formulary-inventory/`: three reviewed supplied redacted application images and the clearly labeled fictional reorder-report illustration.
 - `docs/formulary-inventory-case-study.md`: source clarification, image review, implementation details, and factual limitations.
 
+## Heavenly Homes
+
+In-development full-stack case study at `/#/projects/heavenly-homes`, using the existing Formulary-style project card with home/calendar/community motifs. Project 07 sits beside the shipping flagship, with all six earlier projects preserved. All eight supplied screenshots appear in order only in the case-study gallery, not in the project card header.
+
+- `src/pages/HeavenlyHomesCaseStudy.tsx`: role, vision, UI preview, gallery, target architecture, roadmap, and current status.
+- `src/data/heavenlyHomesCaseStudy.ts`: typed captions, screenshot dimensions, journeys, and planned features.
+- `public/images/heavenly-homes/`: eight reviewed, unchanged supplied PNGs.
+- `docs/heavenly-homes-case-study.md`: package instructions, implementation-status limits, visual consistency, and image review.
+
+React/TypeScript frontend-preview attribution and the full target stack are owner supplied. Application source was not provided, so completed backend functionality, live availability, booking, accounts, and app responsiveness are not asserted. Portfolio layout responsiveness is independently checked. No invented preview/source links or launch metrics.
+
 ## Validation
 
 Production build, strict TypeScript checking, ESLint, dependency audits, and local browser checks are described in `VALIDATION.md`. Automated checks do not replace final keyboard/screen-reader review or owner confirmation of professional content. See `SECURITY.md` for the security model and GitHub Pages limitations.

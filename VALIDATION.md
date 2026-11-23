@@ -149,3 +149,15 @@ The GitHub deployment API remains inaccessible from this environment (HTTP CONNE
 - Existing shipping, VOC/HAP, daily shipping, and AR aging viewers and representative unrelated pages passed regression checks. No browser errors or failed requests. All five existing project entries remain intact; this checkout contains no Production & Formula Dashboard entry.
 - No separate test script or unit-test suite is configured. Source-package differences were clarified with the owner; their message and included CASE_STUDY.md were approved as the specification.
 - No commit, push, deployment, or publication performed.
+
+## Heavenly Homes — November 23, 2026
+
+- Read the supplied CODEX_INSTRUCTIONS.md and inspected the actual Formulary card reference. Reused the exact existing ProjectCard structure and illustration panel styling with home/calendar/community icons. No screenshot in the card header or hero, no global redesign, no new dependencies, no CSP or workflow changes.
+- Build / TypeScript and lint passed. Both the normal GitHub Pages base build and a separate root-base build passed. No separate unit-test script is configured.
+- Chromium at 1440, 768, 375, and 320 pixels passed: route refresh, Home/Projects seven-card integration, flagship preserved, new card near featured work, all eight image paths in supplied order, lazy image decoding and matching dimensions, no horizontal overflow, reduced-motion section focus, all eight enlarged images, next/previous and wraparound, Tab/Shift+Tab focus containment, Escape dismissal and focus restoration.
+- Computed-style comparisons of Heavenly Homes and Formulary project artwork, panel, tiles, body, badges, and footer matched at all four widths. Desktop/mobile card and page screenshots were visually reviewed.
+- Eight automated page/dialog WCAG A/AA scans found zero violations. This does not replace human screen-reader review.
+- Existing shipping, VOC/HAP, daily shipping, AR aging, and Formulary viewers and representative unrelated routes passed regression checks. The current résumé open URL and actual PDF download remained correct. No browser errors or failed HTTP requests.
+- Root-base preview resolved all eight screenshot paths and direct-route refresh; default Pages subpath did likewise. Source and built image bytes match; no ZIP, instructions, or card-reference image in build assets.
+- Heavenly Homes application source was not supplied or found locally. Screenshots demonstrate presentation only. The owner-specified full stack is labeled with evidence limits, with backend functionality, live availability/booking, third-party authentication, geolocation, and API-backed results unverified or planned. Application responsiveness is not inferred from desktop screenshots.
+- No commit, push, deployment, publication, or GitHub setting changes performed.

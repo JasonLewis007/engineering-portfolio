@@ -124,8 +124,42 @@ export const formularyProject: Project = {
   confirmation:
     "Detailed inventory lookup screens, integration specifics, deployment methods, business rules, and measurable outcomes have not been supplied. The reorder report illustration uses entirely fictional data.",
 };
+export const heavenlyHomesProject: Project = {
+  slug: "heavenly-homes",
+  number: "07",
+  category: "FULL-STACK APPLICATION DEVELOPMENT",
+  title: "Heavenly Homes",
+  icon: "heavenly-homes",
+  status: "In Development",
+  summary:
+    "Building a faith-centered hospitality marketplace for vacation rentals, long-term stays, retreats, and community connections.",
+  stack: [
+    "React",
+    "TypeScript",
+    "C#/.NET",
+    "SQL Server",
+    "REST APIs",
+    "MongoDB",
+    "Docker",
+  ],
+  problem:
+    "Typical rental discovery focuses on accommodation. Heavenly Homes aims to combine lodging with faith-centered hospitality, retreats, and community discovery.",
+  responsibilities:
+    "Jason Lewis is Technical Co-Founder / Lead Developer, developing the product vision and frontend preview while planning full-stack integration.",
+  approach:
+    "A cohesive experience for discovering stays, planning gatherings, and finding churches or parishes near a destination. Screenshots demonstrate UI concepts rather than verified live transactions or integrations.",
+  architecture:
+    "Owner-specified target stack: React, TypeScript, C#/.NET, SQL Server, REST APIs, MongoDB, and Docker. Application source was not supplied, so implementation and deployment of these layers have not been independently verified.",
+  challenges:
+    "Engineering themes include component-based UI, typed data models, reusable search/filter patterns, multi-journey UX, API-ready frontend design, and planned secure authentication and backend integration. These are development themes, not source-verified implementation claims.",
+  outcome:
+    "An in-development frontend preview communicates the hospitality marketplace vision. Backend integrations, live availability, and booking are under development.",
+  confirmation:
+    "Application repository, live URL, backend implementation, responsive source behavior, auth providers, data persistence, and hosting remain unverified. No launch, booking, payment, revenue, or user metrics are claimed.",
+};
 export const projects: readonly Project[] = [
   shippingProject,
+  heavenlyHomesProject,
   reportingProject,
   dailyShippingProject,
   arAgingProject,

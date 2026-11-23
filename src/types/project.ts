@@ -13,7 +13,8 @@ export interface Project {
     | "daily-reporting"
     | "ar-aging"
     | "manufacturing"
-    | "formulary";
+    | "formulary"
+    | "heavenly-homes";
   problem: string;
   responsibilities: string;
   approach: string;
