@@ -161,3 +161,13 @@ The GitHub deployment API remains inaccessible from this environment (HTTP CONNE
 - Root-base preview resolved all eight screenshot paths and direct-route refresh; default Pages subpath did likewise. Source and built image bytes match; no ZIP, instructions, or card-reference image in build assets.
 - Heavenly Homes application source was not supplied or found locally. Screenshots demonstrate presentation only. The owner-specified full stack is labeled with evidence limits, with backend functionality, live availability/booking, third-party authentication, geolocation, and API-backed results unverified or planned. Application responsiveness is not inferred from desktop screenshots.
 - No commit, push, deployment, publication, or GitHub setting changes performed.
+
+## Purchase Order Receiving & ERP Integration — November 23, 2026
+
+Replaced the broad project 05 Manufacturing & ERP entry with the owner-confirmed production PO application. Existing `/projects/manufacturing-erp` links resolve to the new page; canonical route is `/projects/purchase-order-receiving-erp`. Other six projects and résumé links remain intact.
+
+Build, TypeScript, ESLint, and whitespace checks passed. Chromium production-preview checks at 1440, 768, 375, and 320 pixels passed: both route names and refresh, Home/Projects seven-card integration and production badge, one reviewed image load with matching dimensions, no horizontal overflow, reduced-motion section focus, single-image viewer, Tab/Shift+Tab containment, Escape dismissal, and focus restoration. Eight WCAG A/AA page/dialog scans found zero violations; manual screen-reader review remains separate. Desktop/mobile views were visually inspected. Other six case-study viewers and résumé link passed regressions; no browser errors or failed requests.
+
+Only the reviewed AI-assisted privacy-edited image is in public assets, with empty fields retained and employer branding/debug overlay removed. Visual/OCR review found no residual employer name, business identifiers, financial amounts, or email addresses. PNG metadata is empty and built asset bytes match the reviewed output. Visible provenance text distinguishes this from an untouched capture. No original sensitive source image added.
+
+Exact ERP transport, .NET version, UI framework, transaction safeguards, and adjustment business rules remain unconfirmed and are not invented. No dedicated unit-test suite exists. No commit, push, deployment, or publication performed.

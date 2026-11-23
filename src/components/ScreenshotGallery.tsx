@@ -16,7 +16,8 @@ type ImageDirectory =
   | "daily-shipping"
   | "ar-aging"
   | "formulary-inventory"
-  | "heavenly-homes";
+  | "heavenly-homes"
+  | "purchase-order";
 function screenshotUrl(directory: ImageDirectory, asset: string) {
   if (
     ![
@@ -26,6 +27,7 @@ function screenshotUrl(directory: ImageDirectory, asset: string) {
       "ar-aging",
       "formulary-inventory",
       "heavenly-homes",
+      "purchase-order",
     ].includes(directory) ||
     !/^[a-z0-9][a-z0-9-]*\.png$/.test(asset)
   ) {

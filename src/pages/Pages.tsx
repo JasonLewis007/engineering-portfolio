@@ -16,6 +16,7 @@ import {
   CallToAction,
   ExternalLink,
 } from "../components/Shared";
+import { PurchaseOrderCaseStudy } from "./PurchaseOrderCaseStudy";
 import { HeavenlyHomesCaseStudy } from "./HeavenlyHomesCaseStudy";
 import { FormularyCaseStudy } from "./FormularyCaseStudy";
 import { ArAgingCaseStudy } from "./ArAgingCaseStudy";
@@ -146,8 +147,14 @@ export function Projects() {
 }
 export function ProjectDetails() {
   const { slug } = useParams();
-  const project = projects.find((item) => item.slug === slug);
+  const project = projects.find(
+    (item) =>
+      item.slug ===
+      (slug === "manufacturing-erp" ? "purchase-order-receiving-erp" : slug),
+  );
   if (!project) return <NotFound />;
+  if (project.slug === "purchase-order-receiving-erp")
+    return <PurchaseOrderCaseStudy project={project} />;
   if (project.icon === "heavenly-homes")
     return <HeavenlyHomesCaseStudy project={project} />;
   if (project.icon === "formulary")

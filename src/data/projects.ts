@@ -157,36 +157,38 @@ export const heavenlyHomesProject: Project = {
   confirmation:
     "Application repository, live URL, backend implementation, responsive source behavior, auth providers, data persistence, and hosting remain unverified. No launch, booking, payment, revenue, or user metrics are claimed.",
 };
+export const purchaseOrderProject: Project = {
+  slug: "purchase-order-receiving-erp",
+  number: "05",
+  category: "PURCHASING & ERP WORKFLOWS",
+  title: "Purchase Order Receiving & ERP Integration",
+  icon: "manufacturing",
+  status: "Deployed in production",
+  summary:
+    "Built a single-screen C# and .NET application for purchase-order receiving, editing, and adjustments, with SQL Server and updates sent to the ERP system.",
+  stack: ["C#", ".NET", "SQL Server", "ERP integration"],
+  problem:
+    "Purchase-order work requires users to review vendor and order details, edit orders, and handle receiving adjustments in the context of the selected PO.",
+  responsibilities:
+    "Jason Lewis built the application. It is deployed and operating in production.",
+  approach:
+    "One screen brings PO loading, vendor information, order details, line items, editing, saving, receiving adjustments, and unreceiving into a single workspace.",
+  architecture:
+    "C# and .NET support the application, with SQL Server and updates sent to the ERP system. The exact ERP transfer mechanism is unconfirmed; no API protocol or file-import process is asserted.",
+  challenges:
+    "Engineering considerations include keeping changes tied to the selected PO, distinguishing editing from receipt adjustments, and communicating the ERP handoff without assuming undocumented safeguards.",
+  outcome:
+    "A deployed production application brings purchase-order editing and receiving work into one screen and sends updates to the ERP system.",
+  confirmation:
+    "The .NET version, UI framework, ERP transfer mechanism, transaction and validation behavior, financial adjustment details, and measured improvements have not been supplied. The screenshot shows the empty application layout, not a completed transaction.",
+};
 export const projects: readonly Project[] = [
   shippingProject,
   heavenlyHomesProject,
   reportingProject,
   dailyShippingProject,
   arAgingProject,
-  {
-    slug: "manufacturing-erp",
-    number: "05",
-    category: "DATA & BUSINESS WORKFLOWS",
-    title: "Manufacturing & ERP Workflow Engineering",
-    icon: "manufacturing",
-    summary:
-      "Engineering the data and application workflows behind manufacturing, inventory, reporting, and ERP operations.",
-    stack: ["SQL Server", "T-SQL", "Access/VBA", ".NET", "ERP integrations"],
-    problem:
-      "Manufacturing and production work depends on connected business processes. Inventory, reporting, and ERP-related workflows need engineering that reflects operational requirements and existing systems.",
-    responsibilities:
-      "The engineering context includes business-critical manufacturing, production, inventory, reporting, and ERP-related workflows using SQL Server, T-SQL, Access/VBA, and .NET.",
-    approach:
-      "Work at the intersection of applications and data, with attention to existing business rules, maintainability, troubleshooting, and the way information moves through operational processes.",
-    architecture:
-      "SQL Server and T-SQL support data engineering, alongside Access/VBA, .NET, and ERP integrations. This is a technology overview, not a diagram or disclosure of actual internal architecture.",
-    challenges:
-      "Existing business workflows can place constraints on modernization. Balancing compatibility, data correctness, and maintainability is an engineering consideration; specific implementation decisions are not disclosed.",
-    outcome:
-      "This portfolio entry describes an area of enterprise engineering responsibility. Specific delivered changes and business outcomes require confirmation; no quantitative impact is claimed.",
-    confirmation:
-      "Confirm representative public examples, individual responsibilities, and nonconfidential outcomes.",
-  },
+  purchaseOrderProject,
   formularyProject,
 ];
 export const technologies = [

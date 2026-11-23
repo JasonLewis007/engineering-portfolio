@@ -164,6 +164,16 @@ In-development full-stack case study at `/#/projects/heavenly-homes`, using the 
 
 React/TypeScript frontend-preview attribution and the full target stack are owner supplied. Application source was not provided, so completed backend functionality, live availability, booking, accounts, and app responsiveness are not asserted. Portfolio layout responsiveness is independently checked. No invented preview/source links or launch metrics.
 
+## Purchase Order Receiving & ERP Integration
+
+The dedicated production case study at `/#/projects/purchase-order-receiving-erp` replaces the broad Manufacturing & ERP entry (project 05). Its former `/#/projects/manufacturing-erp` link remains an alias. The portfolio still has seven projects.
+
+- `src/pages/PurchaseOrderCaseStudy.tsx` and `src/data/purchaseOrderCaseStudy.ts`: single-screen workflow, ownership, ERP context, confirmed technologies, and considerations.
+- `public/images/purchase-order/po-adjustment-manager.png`: reviewed AI-assisted privacy edit with employer branding/debug overlay removed and empty business fields retained.
+- `docs/purchase-order-case-study.md`: confirmed facts, image review, route compatibility, and remaining technical questions.
+
+The stack is C#, .NET, SQL Server, and ERP integration. Neither a specific .NET version nor an API/file transport is inferred. Owner-reported receiving/receivables scope is distinguished from what the empty application screenshot directly shows.
+
 ## Validation
 
 Production build, strict TypeScript checking, ESLint, dependency audits, and local browser checks are described in `VALIDATION.md`. Automated checks do not replace final keyboard/screen-reader review or owner confirmation of professional content. See `SECURITY.md` for the security model and GitHub Pages limitations.
